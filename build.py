@@ -9,7 +9,7 @@ from urllib.parse import quote
 ROOT = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(ROOT, "data", "products.json")
 BASE = "https://oncolinkpharma.com"
-V = "v=1"
+V = "v=2"
 WA_NUM = "923218406899"
 PHONE_DISPLAY = "+92 42 35882906"
 PHONE_TEL = "+924235882906"
@@ -88,7 +88,7 @@ def header(active, rel=""):
 <nav class="main-nav">{''.join(items)}</nav>
 <div class="nav-cta"><a class="btn btn-navy btn-sm" href="tel:{PHONE_TEL}">Call us</a><a class="btn btn-wa btn-sm" href="https://wa.me/{WA_NUM}" target="_blank" rel="noopener">WhatsApp</a></div>
 </div></header>
-<div class="trustbar"><div class="container"><div><b>Since 2006</b><span>Serving patients and hospitals</span></div><div><b>4.5 stars</b><span>24 Google reviews</span></div><div><b>WHO GDP</b><span>Good Distribution Practices</span></div><div><b>Cold chain 2 to 8 C</b><span>Temperature controlled delivery</span></div></div></div>'''
+<div class="trustbar"><div class="container"><div><b>Since 2006</b><span>Patients &amp; hospitals</span></div><div><b>4.5 stars</b><span>24 Google reviews</span></div><div><b>WHO GDP</b><span>Good Distribution</span></div><div><b>Cold chain 2-8 C</b><span>Temperature controlled</span></div></div></div>'''
 
 FOOTER = '''<footer class="site-footer"><div class="container"><div class="cols">
 <div><img class="logo-img foot-logo" src="{rel}assets/img/logo-old.png" alt="ONCOLINK Pharma Distributors" width="130" height="90">

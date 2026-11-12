@@ -1,4 +1,4 @@
-/* ONCOLINK Pharma Distributors — design system v1 */
+/* ONCOLINK Pharma Distributors - design system v1 */
 :root{
   --navy:#5f1220; --navy2:#7a1a2b; --teal:#8a1f30; --teal2:#a83246;
   --green:#8a1f30; --green-dk:#6d1826; --gold:#c9a24b; --gold-dk:#9a7b2d;
@@ -239,4 +239,10 @@ p{margin-bottom:.8rem}
   .logo-text{display:none}
   .hero-search button{padding:14px 14px}
   .site-footer .cols{grid-template-columns:1fr}
+}
+/* mobile trust bar: equal-height cells, no awkward wrapping */
+@media(max-width:700px){
+  .trustbar .container{grid-template-columns:repeat(2,1fr);align-items:start;row-gap:18px;padding-top:16px;padding-bottom:16px}
+  .trustbar b{font-size:1rem}
+  .trustbar span{display:block;line-height:1.35}
 }
