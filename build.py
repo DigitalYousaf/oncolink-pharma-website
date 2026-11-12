@@ -9,7 +9,7 @@ from urllib.parse import quote
 ROOT = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(ROOT, "data", "products.json")
 BASE = "https://oncolinkpharma.com"
-V = "v=4"
+V = "v=5"
 WA_NUM = "923218406899"
 PHONE_DISPLAY = "+92 42 35882906"
 PHONE_TEL = "+924235882906"
@@ -113,13 +113,12 @@ def header(active, rel=""):
         cls = ' class="active"' if href == active else ""
         items.append('<a href="' + rel + href + '"' + cls + '>' + label + '</a>')
     return f'''<header class="site-header"><div class="container">
-<a class="logo" href="{rel}index.html"><img class="logo-img" src="{rel}assets/img/logo-old.png" alt="ONCOLINK Pharma Distributors" width="130" height="90"><span class="logo-text"><b>ONCOLINK Pharma Distributors</b><span>Oncology medicines, Lahore since 2006</span></span></a>
+<a class="logo" href="{rel}index.html"><img class="logo-img" src="{rel}assets/img/logo-old.png" alt="ONCOLINK Pharma Distributors" width="130" height="90"></a>
 <nav class="main-nav">{''.join(items)}</nav>
 <div class="nav-cta"><a class="btn btn-navy btn-sm" href="tel:{PHONE_TEL}">Call us</a><a class="btn btn-wa btn-sm" href="https://wa.me/{WA_NUM}" target="_blank" rel="noopener">WhatsApp</a></div>
 <div class="nav-icons"><a href="tel:{PHONE_TEL}" aria-label="Call us"><svg viewBox="0 0 24 24" fill="none" stroke="#7a1a2b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a><a class="wa-ic" href="https://wa.me/{WA_NUM}" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32" fill="#fff"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8.9 3.9 1.5 6 1.5h.3c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 22.5c-1.9 0-3.8-.5-5.4-1.5l-.4-.2-4.6 1.2 1.2-4.5-.3-.4C6 18.4 5.5 16.7 5.5 15 5.5 9.2 10.2 4.5 16 4.5S26.5 9.2 26.5 15 21.8 25.5 16 25.5zm6.3-7.6c-.3-.2-2-1-2.3-1.1-.3-.1-.6-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.2-.8.1-.3-.2-1.5-.6-2.9-1.8-1.1-.9-1.8-2.1-2-2.4-.2-.3 0-.5.2-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6-.1-.2-.8-2-1.1-2.7-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.4 3.7 5.8 5.2.8.3 1.4.5 1.9.7.8.3 1.5.2 2.1.1.6-.1 2-.8 2.3-1.6.3-.8.3-1.4.2-1.6-.1-.1-.3-.2-.7-.4z"/></svg></a></div>
 <button class="nav-toggle" aria-label="Menu">&#9776;</button>
-</div></header>
-<div class="trustbar"><div class="container"><div><b>Since 2006</b><span>Patients &amp; hospitals</span></div><div><b>4.5 stars</b><span>24 Google reviews</span></div><div><b>WHO GDP</b><span>Good Distribution</span></div><div><b>Cold chain 2-8 C</b><span>Temperature controlled</span></div></div></div>'''
+</div></header>'''
 
 FOOTER = '''<footer class="site-footer"><div class="container"><div class="cols">
 <div><img class="logo-img foot-logo" src="{rel}assets/img/logo-old.png" alt="ONCOLINK Pharma Distributors" width="130" height="90">
@@ -225,14 +224,14 @@ def build_home():
 <div class="eyebrow">Oncology medicine distributor, Lahore since 2006</div>
 <h1>Genuine cancer medicines, delivered with care.</h1>
 <p>We supply oncology and specialty medicines to hospitals, pharmacies, doctors and patients across Pakistan. Every product is genuine, stored correctly and delivered on time.</p>
-<form class="hero-search" id="hero-search"><input id="hero-search-input" type="search" placeholder="Search a medicine by brand or generic name..." aria-label="Search medicines"><button type="submit">Search</button></form>
+<form class="hero-search" id="hero-search"><input id="hero-search-input" type="search" placeholder="Search by brand or generic name" aria-label="Search medicines"><button type="submit">Search</button></form>
 <div class="hero-quick"><a href="shop.html?cat=Anti%20Cancer">Anti Cancer</a><a href="shop.html?q=bevacizumab">Bevacizumab</a><a href="shop.html?q=rituximab">Rituximab</a><a href="shop.html?q=imatinib">Imatinib</a><a href="shop.html?q=trastuzumab">Trastuzumab</a></div>
-<div class="hero-trust"><div><b>Since 2006</b><span>Patients &amp; hospitals</span></div><div><b>4.5 stars</b><span>24 Google reviews</span></div><div><b>WHO GDP</b><span>Good Distribution</span></div><div><b>Cold chain 2 to 8 C</b><span>Temperature controlled</span></div></div>
 <div class="hero-cards">
 <div class="hero-card"><b>1. Find your medicine</b><p>Search by brand or generic name. See the price and stock status right away.</p></div>
 <div class="hero-card"><b>2. WhatsApp or call us</b><p>Confirm availability and price in one message. No account needed.</p></div>
 <div class="hero-card"><b>3. Fast delivery</b><p>Same day delivery in Lahore. Delivery across Pakistan. Cold chain kept intact.</p></div>
 </div></div></section>
+<div class="trustbar"><div class="container"><div><b>Since 2006</b><span>Patients &amp; hospitals</span></div><div><b>4.5 stars</b><span>24 Google reviews</span></div><div><b>WHO GDP</b><span>Good Distribution</span></div><div><b>Cold chain 2 to 8 C</b><span>Temperature controlled</span></div></div></div>
 <section class="section"><div class="container">
 <div class="section-head"><div class="eyebrow">Our medicines</div><h2>Popular medicines</h2><p class="lead">Prices shown are from our current list. Prices can change, so WhatsApp us to confirm today's price before you order.</p><p style="margin-top:10px"><a href="shop.html" class="card-link">See all {len(PRODUCTS)} medicines &rarr;</a></p></div>
 <div class="prod-grid">{cards}</div></div></section>
