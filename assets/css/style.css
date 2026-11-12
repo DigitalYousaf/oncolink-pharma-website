@@ -316,3 +316,14 @@ p{margin-bottom:.8rem}
   .trustbar b{font-size:1rem}
   .trustbar span{display:block;line-height:1.35}
 }
+
+/* Trust bar and Home service cards in theme maroon */
+.trustbar{background:var(--maroon);border-top:2px solid var(--gold);border-bottom:none}
+.trustbar b{color:#fff}
+.trustbar span{color:#e8dcc8}
+.section.alt .grid2 .card{background:var(--maroon);border-color:var(--maroon)}
+.section.alt .grid2 .card h3{color:#fff}
+.section.alt .grid2 .card p{color:#f0e2cf}
+.section.alt .grid2 .card .card-link{color:var(--gold-lt)}
+.section.alt .grid2 .card .icon-badge{background:rgba(255,255,255,.14)}
+.section.alt .grid2 .card .icon-badge svg{stroke:#e8c96a}

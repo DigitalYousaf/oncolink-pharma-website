@@ -9,7 +9,7 @@ from urllib.parse import quote
 ROOT = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(ROOT, "data", "products.json")
 BASE = "https://oncolinkpharma.com"
-V = "v=5"
+V = "v=6"
 WA_NUM = "923218406899"
 PHONE_DISPLAY = "+92 42 35882906"
 PHONE_TEL = "+924235882906"
