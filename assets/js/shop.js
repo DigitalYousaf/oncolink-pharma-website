@@ -12,6 +12,8 @@
   var params = new URLSearchParams(window.location.search);
   var all = [];
   var shown = 0, total = 0;
+  var pageSize = 24, visible = pageSize;
+  var loadBtn = document.getElementById('load-more');
 
   function fmt(n){
     return 'Rs ' + Math.round(n).toLocaleString('en-PK');
@@ -32,8 +34,9 @@
     var btn = p.in_stock
       ? '<a class="btn btn-wa btn-block" href="' + waLink(p) + '" target="_blank" rel="noopener">Order on WhatsApp</a>'
       : '<a class="btn btn-outline btn-block" href="' + waLink(p) + '" target="_blank" rel="noopener">Check availability</a>';
-    var img = p.image ? '<a href="product/' + p.slug + '.html"><img class="prod-img" src="' + p.image + '" alt="' + esc(p.name) + '" loading="lazy"></a>' : '';
-    return '<article class="prod">' + img + badges +
+    var img = p.image ? '<div class="prod-img-wrap"><a href="product/' + p.slug + '.html"><img class="prod-img" src="' + p.image + '" alt="' + esc(p.name) + '" loading="lazy"></a>' + badges + '</div>' : '';
+    return '<article class="prod">' + img +
+      '<div class="prod-cat">' + esc(p.category || '') + '</div>' +
       '<h3><a href="product/' + p.slug + '.html">' + esc(p.name) + '</a></h3>' +
       (p.generic ? '<div class="prod-generic">' + esc(p.generic) + '</div>' : '') +
       (p.manufacturer ? '<div class="prod-mfr">' + esc(p.manufacturer) + '</div>' : '<div class="prod-mfr">&nbsp;</div>') +
@@ -69,10 +72,14 @@
     if (s === 'high') list.sort(function(a,b){ return (b.price_max||0) - (a.price_max||0); });
     if (s === 'az') list.sort(function(a,b){ return a.name.localeCompare(b.name); });
     shown = list.length;
-    countEl.textContent = 'Showing ' + shown + ' of ' + total + ' medicines';
-    grid.innerHTML = list.length ? list.map(card).join('') :
+    var page = list.slice(0, visible);
+    countEl.textContent = 'Showing ' + page.length + ' of ' + shown + ' medicines';
+    grid.innerHTML = list.length ? page.map(card).join('') :
       '<p style="grid-column:1/-1">No medicine matched your search. Try a different spelling, or WhatsApp us and we will check availability for you.</p>';
+    if (loadBtn) loadBtn.style.display = (list.length > visible) ? '' : 'none';
   }
+  function resetPage(){ visible = pageSize; }
+  if (loadBtn) loadBtn.addEventListener('click', function(){ visible += pageSize; apply(); });
   fetch('/data/products.json').then(function(r){ return r.json(); }).then(function(data){
     all = data; total = data.length;
     var cats = {}, mfrs = {};
@@ -86,9 +93,13 @@
     var pq = params.get('q'); if (pq) qInput.value = pq;
     var pc = params.get('cat'); if (pc) catSel.value = pc;
     [qInput, catSel, mfrSel, priceSel, stockChk, sortSel].forEach(function(el){
-      el.addEventListener('input', apply);
-      el.addEventListener('change', apply);
+      el.addEventListener('input', function(){ resetPage(); apply(); });
+      el.addEventListener('change', function(){ resetPage(); apply(); });
     });
     apply();
+  }).catch(function(){
+    countEl.innerHTML = 'Could not load medicines, please <a href="https://wa.me/923218406899" target="_blank" rel="noopener">WhatsApp us</a>.';
+    grid.innerHTML = '<p style="grid-column:1/-1">We could not load the medicine list. Please <a href="https://wa.me/923218406899" target="_blank" rel="noopener">WhatsApp us on +92 321 8406899</a> with the medicine name and we will check availability and price for you.</p>';
+    if (loadBtn) loadBtn.style.display = 'none';
   });
 })();

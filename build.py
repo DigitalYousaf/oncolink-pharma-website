@@ -9,7 +9,7 @@ from urllib.parse import quote
 ROOT = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(ROOT, "data", "products.json")
 BASE = "https://oncolinkpharma.com"
-V = "v=3"
+V = "v=4"
 WA_NUM = "923218406899"
 PHONE_DISPLAY = "+92 42 35882906"
 PHONE_TEL = "+924235882906"
@@ -62,16 +62,47 @@ def prod_card(p, rel=""):
     gen = ('<div class="prod-generic">' + esc(p["generic"]) + '</div>'
            if p.get("generic") and p["generic"].lower() not in p["name"].lower() else '')
     mfr = '<div class="prod-mfr">' + esc(p["manufacturer"]) + '</div>' if p.get("manufacturer") else '<div class="prod-mfr">&nbsp;</div>'
-    img = ('<a href="' + rel + 'product/' + p["slug"] + '.html"><img class="prod-img" src="' + rel + p.get("image", "") + '" alt="' + esc(p["name"]) + '" loading="lazy"></a>'
+    img = ('<div class="prod-img-wrap"><a href="' + rel + 'product/' + p["slug"] + '.html"><img class="prod-img" src="' + rel + p.get("image", "") + '" alt="' + esc(p["name"]) + '" loading="lazy"></a>' + stock_badge(p) + '</div>'
            if p.get("image") else '')
-    return ('<article class="prod">' + img + stock_badge(p) +
+    return ('<article class="prod">' + img +
             '<div class="prod-cat">' + esc(p["category"]) + '</div>' +
             '<h3><a href="' + rel + 'product/' + p["slug"] + '.html">' + esc(p["name"]) + '</a></h3>' +
             gen + mfr + price_html(p) + btn + '</article>')
 
 # ---------------- shared chrome ----------------
+ICONS = {
+    "hospital": '<svg viewBox="0 0 24 24" fill="none" stroke="#7a1a2b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21v-4h6v4"/><path d="M12 10v4"/><path d="M10 12h4"/></svg>',
+    "home": '<svg viewBox="0 0 24 24" fill="none" stroke="#7a1a2b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M9 21v-6h6v6"/></svg>',
+    "snow": '<svg viewBox="0 0 24 24" fill="none" stroke="#7a1a2b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M4 6l16 12"/><path d="M20 6 4 18"/><path d="M12 2 10 5"/><path d="M12 2l2 3"/><path d="M12 22l-2-3"/><path d="M12 22l2-3"/></svg>',
+    "pill": '<svg viewBox="0 0 24 24" fill="none" stroke="#7a1a2b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m10.5 20.5-7-7a4.95 4.95 0 1 1 7-7l7 7a4.95 4.95 0 1 1-7 7Z"/><path d="m8.5 8.5 7 7"/></svg>',
+    "check": '<svg viewBox="0 0 24 24" fill="none" stroke="#1f7a4d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>',
+}
+CHECK = ICONS["check"]
+
+# Shared service descriptions (one text used on Home and on the Services page)
+SERVICES = [
+    ("hospital", "Distribution for institutions",
+     "We work with government, semi-government and private institutions in Lahore on tender business. We keep manufacturers informed about tenders, share the details they need to win, and supply as per PPRA rules.",
+     "services-institutions.html"),
+    ("home", "Patient home supply",
+     "We deliver regular use medicines for oncology, hepatology and nephrology to the patient's doorstep. Same day orders in Lahore are delivered the same day. We keep a complete record of patients, addresses and phone numbers.",
+     "services-home-supply.html"),
+    ("snow", "Cold chain products",
+     "Temperature sensitive medicines stay at 2 to 8 C from our cold room to your door. Solar power is our first source of electricity, Wapda is second, and a generator is third. Refrigerators are calibrated and validated every year.",
+     "services-cold-chain.html"),
+    ("pill", "Distribution for pharmacies",
+     "We arrange supplies for selected pharmaceutical companies at all leading pharmacies of Lahore, so patients can find their medicine close to home.",
+     "services-pharmacies.html"),
+]
+
+def service_cards():
+    out = []
+    for icon, title, text, href in SERVICES:
+        out.append('<div class="card"><div class="icon-badge">' + ICONS[icon] + '</div><h3>' + title + '</h3><p>' + text + '</p><a class="card-link" href="' + href + '">Learn more &rarr;</a></div>')
+    return "".join(out)
+
 NAV = [
-    ("index.html", "Home"), ("shop.html", "Medicines"), ("services.html", "Services"),
+    ("index.html", "Home"), ("about.html", "About"), ("shop.html", "Medicines"), ("services.html", "Services"),
     ("hospitals.html", "Hospitals"), ("cold-chain.html", "Cold Chain"),
     ("patient-support.html", "Patient Support"), ("blog.html", "Blog"), ("contact.html", "Contact"),
 ]
@@ -83,10 +114,10 @@ def header(active, rel=""):
         items.append('<a href="' + rel + href + '"' + cls + '>' + label + '</a>')
     return f'''<header class="site-header"><div class="container">
 <a class="logo" href="{rel}index.html"><img class="logo-img" src="{rel}assets/img/logo-old.png" alt="ONCOLINK Pharma Distributors" width="130" height="90"><span class="logo-text"><b>ONCOLINK Pharma Distributors</b><span>Oncology medicines, Lahore since 2006</span></span></a>
-<form class="header-search" id="header-search"><input id="header-search-input" type="search" placeholder="Search a medicine..." aria-label="Search medicines"><button type="submit">Search</button></form>
-<button class="nav-toggle" aria-label="Menu">&#9776;</button>
 <nav class="main-nav">{''.join(items)}</nav>
 <div class="nav-cta"><a class="btn btn-navy btn-sm" href="tel:{PHONE_TEL}">Call us</a><a class="btn btn-wa btn-sm" href="https://wa.me/{WA_NUM}" target="_blank" rel="noopener">WhatsApp</a></div>
+<div class="nav-icons"><a href="tel:{PHONE_TEL}" aria-label="Call us"><svg viewBox="0 0 24 24" fill="none" stroke="#7a1a2b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a><a class="wa-ic" href="https://wa.me/{WA_NUM}" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32" fill="#fff"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8.9 3.9 1.5 6 1.5h.3c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 22.5c-1.9 0-3.8-.5-5.4-1.5l-.4-.2-4.6 1.2 1.2-4.5-.3-.4C6 18.4 5.5 16.7 5.5 15 5.5 9.2 10.2 4.5 16 4.5S26.5 9.2 26.5 15 21.8 25.5 16 25.5zm6.3-7.6c-.3-.2-2-1-2.3-1.1-.3-.1-.6-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.2-.8.1-.3-.2-1.5-.6-2.9-1.8-1.1-.9-1.8-2.1-2-2.4-.2-.3 0-.5.2-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6-.1-.2-.8-2-1.1-2.7-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.4 3.7 5.8 5.2.8.3 1.4.5 1.9.7.8.3 1.5.2 2.1.1.6-.1 2-.8 2.3-1.6.3-.8.3-1.4.2-1.6-.1-.1-.3-.2-.7-.4z"/></svg></a></div>
+<button class="nav-toggle" aria-label="Menu">&#9776;</button>
 </div></header>
 <div class="trustbar"><div class="container"><div><b>Since 2006</b><span>Patients &amp; hospitals</span></div><div><b>4.5 stars</b><span>24 Google reviews</span></div><div><b>WHO GDP</b><span>Good Distribution</span></div><div><b>Cold chain 2-8 C</b><span>Temperature controlled</span></div></div></div>'''
 
@@ -115,6 +146,7 @@ FOOTER = '''<footer class="site-footer"><div class="container"><div class="cols"
 <li><svg class="f-ic" viewBox="0 0 24 24" fill="none" stroke="#c9a24b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>Email: <a href="mailto:info@oncolinkpharma.com">info@oncolinkpharma.com</a></span></li>
 <li><svg class="f-ic" viewBox="0 0 24 24" fill="none" stroke="#c9a24b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Mon to Fri 9 AM to 6 PM<br>Sat 9 AM to 5 PM, Sun closed</span></li></ul></div>
 </div></div>
+<div class="foot-trust"><span>Since 2006</span><span>4.5 stars, 24 Google reviews</span><span>WHO Good Distribution</span><span>Cold chain 2 to 8 C</span></div>
 <div class="bottom"><div class="container"><span>Copyright 2026 Oncolink Pharma Distributors. All rights reserved.</span><span><a href="privacy.html">Privacy</a> &nbsp;|&nbsp; <a href="terms.html">Terms</a> &nbsp;|&nbsp; <a href="shipping.html">Shipping</a> &nbsp;|&nbsp; <a href="returns.html">Returns</a></span></div></div></footer>
 <a class="wa-float" href="https://wa.me/923218406899?text=Hello%20Oncolink%2C%20I%20need%20help%20with%20a%20medicine." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32" fill="#fff"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8.9 3.9 1.5 6 1.5h.3c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 22.5c-1.9 0-3.8-.5-5.4-1.5l-.4-.2-4.6 1.2 1.2-4.5-.3-.4C6 18.4 5.5 16.7 5.5 15 5.5 9.2 10.2 4.5 16 4.5S26.5 9.2 26.5 15 21.8 25.5 16 25.5zm6.3-7.6c-.3-.2-2-1-2.3-1.1-.3-.1-.6-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.2-.8.1-.3-.2-1.5-.6-2.9-1.8-1.1-.9-1.8-2.1-2-2.4-.2-.3 0-.5.2-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6-.1-.2-.8-2-1.1-2.7-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.4 3.7 5.8 5.2.8.3 1.4.5 1.9.7.8.3 1.5.2 2.1.1.6-.1 2-.8 2.3-1.6.3-.8.3-1.4.2-1.6-.1-.1-.3-.2-.7-.4z"/></svg></a>'''
 
@@ -143,7 +175,7 @@ def page(title, desc, active, body, rel="", extra_head=""):
 <link rel="icon" href="{rel}assets/img/logo-old.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{rel}assets/css/style.css?{V}">
 {extra_head}</head>
 <body>
@@ -162,11 +194,11 @@ def write(path, content):
     return path
 
 def cta_band(rel=""):
-    return f'''<section class="section alt"><div class="container center">
+    return f'''<section class="section cta-band"><div class="container center">
 <h2>Need a medicine? Talk to us directly.</h2>
 <p class="lead" style="margin:0 auto 18px">Send the medicine name on WhatsApp or call us. We confirm price and availability, then arrange delivery.</p>
 <a class="btn btn-wa" href="https://wa.me/{WA_NUM}" target="_blank" rel="noopener">WhatsApp {WA_DISPLAY}</a>
-&nbsp; <a class="btn btn-navy" href="tel:{PHONE_TEL}">Call {PHONE_DISPLAY}</a></div></section>'''
+<a class="btn btn-call" href="tel:{PHONE_TEL}">Call {PHONE_DISPLAY}</a></div></section>'''
 
 # ---------------- home ----------------
 POPULAR_SLUGS = [
@@ -181,7 +213,6 @@ REVIEWS = [
     ("Kamran Taj", "Excellent."),
     ("Rizwan Butt", "Easy link to find oncology products."),
     ("Umar Khokhar", "Good distributor. Recommended."),
-    ("Zeshan Malik", "Good staaf."),
 ]
 
 def build_home():
@@ -191,59 +222,44 @@ def build_home():
         '<div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>&ldquo;' + esc(t) + '&rdquo;</p><div class="who">' + esc(n) + ' &middot; Google review</div></div>'
         for n, t in REVIEWS)
     body = f'''<section class="hero"><div class="container">
-<div class="hero-grid">
-<div class="hero-copy">
 <div class="eyebrow">Oncology medicine distributor, Lahore since 2006</div>
 <h1>Genuine cancer medicines, delivered with care.</h1>
 <p>We supply oncology and specialty medicines to hospitals, pharmacies, doctors and patients across Pakistan. Every product is genuine, stored correctly and delivered on time.</p>
 <form class="hero-search" id="hero-search"><input id="hero-search-input" type="search" placeholder="Search a medicine by brand or generic name..." aria-label="Search medicines"><button type="submit">Search</button></form>
 <div class="hero-quick"><a href="shop.html?cat=Anti%20Cancer">Anti Cancer</a><a href="shop.html?q=bevacizumab">Bevacizumab</a><a href="shop.html?q=rituximab">Rituximab</a><a href="shop.html?q=imatinib">Imatinib</a><a href="shop.html?q=trastuzumab">Trastuzumab</a></div>
-</div>
-<div class="hero-visual">
-<div class="hero-visual-card">
-<span class="hero-badge">100% Genuine</span>
-<img class="hero-main-img" src="assets/img/products/avastin-inj-bevacizumab.webp" alt="Avastin 400 mg/16 ml injection box by Roche" loading="eager">
-<div class="hero-visual-row">
-<img src="assets/img/products/herceptin-trastuzumab.webp" alt="Herceptin 600 mg/5 ml injection box by Roche" loading="lazy">
-<img src="assets/img/products/nexavar-200-mg-tab-25c-60-s-sorafenib.webp" alt="Nexavar 200 mg film-coated tablets box by Bayer" loading="lazy">
-</div>
-<p class="hero-visual-cap">Genuine packs from Roche, Bayer and other leading makers.</p>
-</div>
-</div>
-</div>
+<div class="hero-trust"><div><b>Since 2006</b><span>Patients &amp; hospitals</span></div><div><b>4.5 stars</b><span>24 Google reviews</span></div><div><b>WHO GDP</b><span>Good Distribution</span></div><div><b>Cold chain 2 to 8 C</b><span>Temperature controlled</span></div></div>
 <div class="hero-cards">
 <div class="hero-card"><b>1. Find your medicine</b><p>Search by brand or generic name. See the price and stock status right away.</p></div>
 <div class="hero-card"><b>2. WhatsApp or call us</b><p>Confirm availability and price in one message. No account needed.</p></div>
 <div class="hero-card"><b>3. Fast delivery</b><p>Same day delivery in Lahore. Delivery across Pakistan. Cold chain kept intact.</p></div>
 </div></div></section>
 <section class="section"><div class="container">
-<div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:10px"><h2>Popular medicines</h2><a href="shop.html" class="card-link">See all 236 medicines &rarr;</a></div>
-<p class="lead">Prices shown are from our current list. Prices can change, so WhatsApp us to confirm today's price before you order.</p>
+<div class="section-head"><div class="eyebrow">Our medicines</div><h2>Popular medicines</h2><p class="lead">Prices shown are from our current list. Prices can change, so WhatsApp us to confirm today's price before you order.</p><p style="margin-top:10px"><a href="shop.html" class="card-link">See all {len(PRODUCTS)} medicines &rarr;</a></p></div>
 <div class="prod-grid">{cards}</div></div></section>
 <section class="section alt"><div class="container">
-<h2>What we do</h2>
-<p class="lead">Four services, one promise. Genuine medicines, handled properly, delivered on time.</p>
-<div class="grid2" style="margin-top:18px">
-<div class="card"><div class="icon-badge">&#127973;</div><h3>Distribution for institutions</h3><p>We work with government, semi-government and private institutions in Lahore on tender business. We keep manufacturers informed about tenders, share the details they need to win, and supply as per PPRA rules.</p><a class="card-link" href="services-institutions.html">Learn more &rarr;</a></div>
-<div class="card"><div class="icon-badge">&#127968;</div><h3>Patient home supply</h3><p>We deliver regular use medicines for oncology, hepatology and nephrology to the patient's doorstep. Same day orders in Lahore are delivered the same day. We keep a complete record of patients, addresses and phone numbers.</p><a class="card-link" href="services-home-supply.html">Learn more &rarr;</a></div>
-<div class="card"><div class="icon-badge">&#10052;</div><h3>Cold chain products</h3><p>Temperature sensitive medicines stay at 2 to 8 C from our cold room to your door. Solar power is our first source of electricity, Wapda is second, and a generator is third. Refrigerators are calibrated and validated every year.</p><a class="card-link" href="services-cold-chain.html">Learn more &rarr;</a></div>
-<div class="card"><div class="icon-badge">&#128138;</div><h3>Distribution for pharmacies</h3><p>We arrange supplies for selected pharmaceutical companies at all leading pharmacies of Lahore, so patients can find their medicine close to home.</p><a class="card-link" href="services-pharmacies.html">Learn more &rarr;</a></div>
-</div></div></section>
+<div class="section-head"><div class="eyebrow">What we do</div><h2>Four services, one promise</h2><p class="lead">Genuine medicines, handled properly, delivered on time.</p></div>
+<div class="grid2">{service_cards()}</div></div></section>
 <section class="section"><div class="container">
 <div class="grid2">
 <div><h2>Why hospitals and patients trust us</h2>
 <p>We have been doing this since 2006. That is nearly twenty years of supplying cancer medicines in Lahore and beyond. Our principals include Bayer, Roche, Pfizer, Novartis, Sanofi and Eli Lilly. Our procedures follow WHO Good Distribution Practices, and a dedicated team checks every product before it leaves us.</p>
 <p>We serve government institutions, private hospitals, doctors, pharmacies and patients in Lahore, Gujranwala, Faisalabad, Multan and other allocated areas of Pakistan.</p>
-<a class="btn btn-navy" href="about.html">Read our story</a></div>
-<div><div class="google-badge"><span class="big">4.5</span><span><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><br>24 Google reviews</span></div>
+<a class="btn btn-navy" href="about.html">Read our story</a>
+<div style="margin-top:22px"><div class="google-badge"><span class="big">4.5</span><span><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><br>24 Google reviews</span></div></div>
+<div class="stat-grid" style="grid-template-columns:repeat(2,1fr);margin-top:16px">
+<div class="stat"><b>2006</b><span>Supplying since</span></div>
+<div class="stat"><b>{len(PRODUCTS)}</b><span>Medicines listed</span></div>
+<div class="stat"><b>10</b><span>Principal companies</span></div>
+<div class="stat"><b>4.5</b><span>Google rating</span></div>
+</div></div>
+<div>
 <div style="display:grid;gap:14px;margin-top:16px">{revs}</div></div>
 </div></div></section>
 <section class="section alt"><div class="container">
-<h2>Our principals</h2>
-<p class="lead">We distribute for leading multinational and national pharmaceutical companies.</p>
+<div class="section-head"><div class="eyebrow">Trusted partners</div><h2>Our principals</h2><p class="lead">We distribute for leading multinational and national pharmaceutical companies.</p></div>
 <div class="principals" style="margin-top:16px"><span class="principal">Bayer</span><span class="principal">Roche</span><span class="principal">Pfizer</span><span class="principal">Novartis</span><span class="principal">Sanofi</span><span class="principal">Eli Lilly</span><span class="principal">ICI Pakistan</span><span class="principal">Atco Pharma</span><span class="principal">AJM Pharma</span><span class="principal">Medinet</span></div></div></section>
 <section class="section"><div class="container">
-<h2>Questions patients ask us</h2>
+<div class="section-head"><div class="eyebrow">FAQs</div><h2>Questions patients ask us</h2></div>
 <div style="margin-top:16px">
 <div class="faq-item"><button class="faq-q">How do I order a medicine? <span>+</span></button><div class="faq-a"><p>Search for the medicine on this website, then tap Order on WhatsApp. Send us the name and strength. We confirm the price and availability, then arrange delivery or pickup.</p></div></div>
 <div class="faq-item"><button class="faq-q">Do you deliver outside Lahore? <span>+</span></button><div class="faq-a"><p>Yes, we deliver across Pakistan. Same day delivery is available in Lahore. For other cities, WhatsApp us and we will confirm the delivery time for your city.</p></div></div>
@@ -258,12 +274,14 @@ def build_home():
 
 # ---------------- shop ----------------
 def build_shop():
-    body = '''<div class="page-head"><div class="container">
+    body = f'''<div class="page-head dark"><div class="container">
+<div class="eyebrow">Oncology and specialty medicines</div>
 <h1>All medicines</h1>
-<p>236 medicines with prices. Search by brand name or generic name, filter by category and manufacturer, and order on WhatsApp in one tap. Prices can change, so WhatsApp us to confirm today's price.</p></div></div>
+<p>{len(PRODUCTS)} medicines with prices. Search by brand name or generic name, filter by category and manufacturer, and order on WhatsApp in one tap. Prices can change, so WhatsApp us to confirm today's price.</p>
+<div class="shop-chips"><span>Same day delivery in Lahore</span><span>100% genuine packs</span><span>Cold chain 2 to 8 C</span></div></div></div>
 <section class="section"><div class="container">
 <div class="shop-toolbar">
-<div class="field grow"><label for="f-q">Search</label><input id="f-q" type="search" placeholder="Type a brand or generic name, for example bevacizumab..."></div>
+<div class="field grow"><label for="f-q">Search</label><input id="f-q" type="search" placeholder="Brand or generic name..."></div>
 <div class="field"><label for="f-cat">Category</label><select id="f-cat"><option value="">All categories</option></select></div>
 <div class="field"><label for="f-mfr">Manufacturer</label><select id="f-mfr"><option value="">All manufacturers</option></select></div>
 <div class="field"><label for="f-price">Price</label><select id="f-price"><option value="">Any price</option><option value="under5k">Under Rs 5,000</option><option value="5to25k">Rs 5,000 to 25,000</option><option value="25to100k">Rs 25,000 to 100,000</option><option value="over100k">Over Rs 100,000</option><option value="noprice">Call for price</option></select></div>
@@ -272,12 +290,13 @@ def build_shop():
 </div>
 <p class="shop-count" id="shop-count">Loading medicines...</p>
 <div class="prod-grid" id="prod-grid"></div>
-<div class="callout" style="margin-top:22px"><b>Can not find your medicine?</b> WhatsApp us the name and strength. We will check availability and price for you, usually within minutes during working hours.</div>
+<div class="load-more-wrap"><button class="btn btn-navy" id="load-more" type="button" style="display:none">Load more medicines</button></div>
+<div class="callout" style="margin-top:22px"><b>Cannot find your medicine?</b> WhatsApp us the name and strength. We will check availability and price for you, usually within minutes during working hours.</div>
 </div></section>
 <script src="assets/js/shop.js?v=1"></script>'''
     return write("shop.html", page(
         "All Medicines | ONCOLINK Pharma Distributors Lahore",
-        "Search 236 oncology and specialty medicines with prices. Anti cancer, haematology, rheumatology and more. Order on WhatsApp, same day delivery in Lahore.",
+        "Search " + str(len(PRODUCTS)) + " oncology and specialty medicines with prices. Anti cancer, haematology, rheumatology and more. Order on WhatsApp, same day delivery in Lahore.",
         "shop.html", body))
 
 # ---------------- product pages ----------------
@@ -308,16 +327,15 @@ def build_products():
         else:
             order_btn = '<a class="btn btn-outline btn-block" href="' + wa_order(p) + '" target="_blank" rel="noopener">Check availability on WhatsApp</a>'
         meta_rows = ""
-        if p.get("generic"):
-            meta_rows += "<tr><td>Generic name</td><td>" + esc(p["generic"]) + "</td></tr>"
-        if p.get("manufacturer"):
-            meta_rows += "<tr><td>Manufacturer</td><td>" + esc(p["manufacturer"]) + "</td></tr>"
+        meta_rows += "<tr><td>Generic name</td><td>" + (esc(p["generic"]) if p.get("generic") else "Ask us") + "</td></tr>"
+        meta_rows += "<tr><td>Manufacturer</td><td>" + (esc(p["manufacturer"]) if p.get("manufacturer") else "Ask us") + "</td></tr>"
         meta_rows += "<tr><td>Category</td><td>" + esc(p["category"]) + "</td></tr>"
         meta_rows += "<tr><td>Availability</td><td>" + ("In stock" if p["in_stock"] else "Out of stock") + "</td></tr>"
-        cold_note = ('<div class="callout"><b>Cold chain:</b> If this medicine needs cold storage, we pack and ship it in insulated packaging with cold packs, and keep it at 2 to 8 C. Ask us on WhatsApp and we will confirm how your medicine is stored and shipped.</div>'
-                     if p["category"] in ("Anti Cancer", "Haematology") else "")
+        cold_note = '<div class="callout"><b>Cold chain:</b> If this medicine needs cold storage, we pack and ship it in insulated packaging with cold packs, and keep it at 2 to 8 C. Ask us on WhatsApp and we will confirm how your medicine is stored and shipped.</div>' 
         rel_cards = "".join(prod_card(x, "../") for x in related(p))
-        pd_img = ('<div class="pd-img"><img src="../' + p.get("image", "") + '" alt="' + esc(p["name"]) + '" loading="lazy"></div>'
+        pd_cls = "pd-img ph" if p.get("image_placeholder") else "pd-img"
+        pd_note = '<p class="pd-img-note">Photo coming soon. The pack photo for this medicine is not available yet. WhatsApp us and we will confirm the pack and price.</p>' if p.get("image_placeholder") else ""
+        pd_img = ('<div class="' + pd_cls + '"><img src="../' + p.get("image", "") + '" alt="' + esc(p["name"]) + '" loading="lazy"></div>' + pd_note
                   if p.get("image") else "")
         body = f'''<div class="page-head"><div class="container"><div class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="../shop.html">Medicines</a> &rsaquo; {esc(p["name"])}</div>
 <h1>{esc(p["name"])}</h1></div></div>
@@ -336,6 +354,13 @@ def build_products():
 {order_btn}
 <a class="btn btn-navy btn-block" style="margin-top:10px" href="tel:{PHONE_TEL}">Call {PHONE_DISPLAY}</a>
 <p style="margin-top:14px;font-size:.9rem;color:var(--muted)">Same day delivery in Lahore. Delivery across Pakistan. Genuine products, checked before dispatch.</p>
+<ul class="pd-trust">
+<li>{CHECK}<span><b>Genuine, checked before dispatch.</b> We buy directly from the manufacturers and their authorised principals.</span></li>
+<li>{CHECK}<span><b>Same day delivery in Lahore.</b> Delivery across Pakistan. Tell us your city on WhatsApp and we confirm the time.</span></li>
+<li>{CHECK}<span><b>Cold chain kept at 2 to 8 C.</b> If this medicine needs cold storage, it travels in insulated packaging with cold packs.</span></li>
+<li>{CHECK}<span><b>Price confirmed before you pay.</b> Prices can change, so WhatsApp us to confirm today's price.</span></li>
+</ul>
+<div class="pd-help"><b>Need help with this medicine?</b><p>Send the name and strength on WhatsApp. We usually reply within minutes during working hours.</p><a class="btn btn-wa btn-block" href="{wa_order(p)}" target="_blank" rel="noopener">WhatsApp us about this medicine</a></div>
 </div></div>
 <h2 style="margin-top:40px">Related medicines</h2>
 <div class="prod-grid" style="margin-top:16px">{rel_cards}</div>
@@ -361,6 +386,12 @@ def build_about():
 <p>Oncolink Pharma Distributors is a trusted pharmaceutical company committed to supplying high-quality medicines across Pakistan. We specialize in oncology and specialty care, ensuring timely delivery, proper storage, and genuine products. Our focus is reliability, compliance, and customer satisfaction, supporting healthcare providers with efficient and professional services every day.</p>
 <h2>Our story</h2>
 <p>Oncolink Pharma Distributor was established in 2006. Since then we have served patients as well as institutions, and we offer distribution services to multinational and national pharmaceutical companies in Lahore.</p>
+<div class="stat-grid">
+<div class="stat"><b>2006</b><span>Established in Lahore</span></div>
+<div class="stat"><b>10</b><span>Principal companies</span></div>
+<div class="stat"><b>2 to 8 C</b><span>Cold chain, always</span></div>
+<div class="stat"><b>4.5</b><span>Google rating, 24 reviews</span></div>
+</div>
 <p>Our objective is simple. Provide the best service in the supply of quality medicines to customers, patients, doctors, pharmacies and government institutions, on top priority, to save human lives.</p>
 <h2>How we work</h2>
 <p>Our vision is to provide the best services to companies and promote their business. We have qualified, trained and experienced professional staff working as per Oncolink SOPs.</p>
@@ -381,31 +412,29 @@ def build_about():
 <p>Oncolink Pharma Distributors is led by Muhammad Sajid, Chief Executive Officer.</p>
 <h2>Our principals</h2>
 <p>We distribute for Bayer Pakistan, Sanofi Pakistan, Roche Pakistan, Pfizer Pakistan, ICI Pakistan, Novartis Oncology, Atco Pharma, Eli Lilly, AJM Pharma and Medinet Pharmaceutical.</p>
+<div class="principals" style="justify-content:flex-start;margin-top:14px"><span class="principal">Bayer</span><span class="principal">Roche</span><span class="principal">Pfizer</span><span class="principal">Novartis</span><span class="principal">Sanofi</span><span class="principal">Eli Lilly</span><span class="principal">ICI Pakistan</span><span class="principal">Atco Pharma</span><span class="principal">AJM Pharma</span><span class="principal">Medinet</span></div>
 <p><a class="btn btn-navy" href="contact.html">Contact us</a> &nbsp; <a class="btn btn-outline" href="shop.html">See our medicines</a></p>
 </div>'''
     return simple_page("about.html",
         "About Us | ONCOLINK Pharma Distributors Lahore",
         "Oncolink Pharma Distributors has supplied genuine oncology and specialty medicines across Pakistan since 2006. WHO Good Distribution Practices, cold chain 2 to 8 C.",
-        "index.html", head, body)
+        "about.html", head, body)
 
 def build_services():
     head = "<h1>Our services</h1><p>Four services, one promise. Genuine medicines, handled properly, delivered on time.</p>"
-    body = '''<div class="grid2">
-<div class="card"><div class="icon-badge">&#127973;</div><h3>Distribution for institutions</h3><p>We work with all government institutions for tender business in Lahore. We keep manufacturers informed about tenders, share the details they need to win, and supply as per PPRA rules for the purchase of medicine.</p><a class="card-link" href="services-institutions.html">Learn more &rarr;</a></div>
-<div class="card"><div class="icon-badge">&#127968;</div><h3>Patient home supply</h3><p>We deliver regular use medicines for hepatology, nephrology and oncology to the patient's doorstep. Same day orders in Lahore are delivered the same day. We keep a complete record of patients, addresses and phone numbers.</p><a class="card-link" href="services-home-supply.html">Learn more &rarr;</a></div>
-<div class="card"><div class="icon-badge">&#10052;</div><h3>Cold chain products</h3><p>Temperature sensitive medicines stay at 2 to 8 C from our cold room to your door. Solar power is our first source of electricity, Wapda is second, and a generator is third. Refrigerators are calibrated and validated every year.</p><a class="card-link" href="services-cold-chain.html">Learn more &rarr;</a></div>
-<div class="card"><div class="icon-badge">&#128138;</div><h3>Distribution for pharmacies</h3><p>We have arrangements with selected pharmaceutical companies to ensure their supplies reach all leading pharmacies of Lahore, so patients can find their medicine close to home.</p><a class="card-link" href="services-pharmacies.html">Learn more &rarr;</a></div>
-</div>'''
+    body = '<div class="section-head"><div class="eyebrow">What we do</div><h2>Four services, one promise</h2><p class="lead">Genuine medicines, handled properly, delivered on time.</p></div><div class="grid2">' + service_cards() + '</div>'
     return simple_page("services.html",
         "Services | ONCOLINK Pharma Distributors Lahore",
         "Distribution for institutions, patient home supply, cold chain products and pharmacy distribution. Genuine oncology medicines across Pakistan since 2006.",
         "services.html", head, body)
 
-def service_detail(path, title, desc, heading, intro, points, extra=""):
+def service_detail(path, title, desc, heading, intro, sections, extra=""):
     head = f"<h1>{heading}</h1><p>{intro}</p>"
-    lis = "".join("<li>" + p + "</li>" for p in points)
-    body = f'''<div class="article"><ul>{lis}</ul>{extra}
-<p><a class="btn btn-wa" href="https://wa.me/{WA_NUM}" target="_blank" rel="noopener">WhatsApp us</a> &nbsp; <a class="btn btn-outline" href="services.html">&larr; All services</a></p></div>'''
+    parts = []
+    for h, html in sections:
+        parts.append("<h2>" + h + "</h2>" + html)
+    body = '<div class="article">' + "".join(parts) + extra + f"""
+<p><a class="btn btn-wa" href="https://wa.me/{WA_NUM}" target="_blank" rel="noopener">WhatsApp us</a> &nbsp; <a class="btn btn-outline" href="services.html">&larr; All services</a></p></div>"""
     return simple_page(path, title, desc, "services.html", head, body)
 
 def build_service_details():
@@ -414,41 +443,65 @@ def build_service_details():
         "Tender supply for government, semi-government and private institutions in Lahore. PPRA rules, on time delivery, genuine oncology medicines.",
         "Distribution for institutions",
         "We supply medicines to government, semi-government and private institutions in Lahore through tender business.",
-        ["We work with all government institutions for tender business in Lahore.",
-         "We keep manufacturers informed about tenders in time.",
-         "We provide the details manufacturers need to win tenders as per PPRA rules for the purchase of medicine.",
-         "We supply to public sector hospitals, private hospitals and leading pharmacies."])
+        [
+            ("How tender supply works",
+             "<p>We work with all government institutions for tender business in Lahore. We keep manufacturers informed about tenders in time, and we provide the details manufacturers need to win tenders as per PPRA rules for the purchase of medicine. Then we supply against the tender, on time and in full.</p>"),
+            ("Who we supply",
+             "<p>We supply to public sector hospitals, private hospitals, leading pharmacies and government institutions in Lahore. Our coverage also reaches Gujranwala, Faisalabad, Multan and other allocated areas of Pakistan.</p>"),
+            ("Why institutions choose us",
+             "<ul><li><b>Genuine products.</b> We distribute for Bayer, Roche, Pfizer, Novartis, Sanofi, Eli Lilly, ICI, Atco, AJM and Medinet. Every product is checked before dispatch by a dedicated team of trained professionals.</li><li><b>Proper procedures.</b> We have Standard Operating Procedures in compliance with WHO Good Distribution Practices, so only the best quality product reaches our clients.</li><li><b>Cold chain.</b> Temperature sensitive medicines stay at 2 to 8 C, with solar, Wapda and generator backup, and yearly calibration and validation.</li><li><b>On time delivery.</b> Same day delivery in Lahore for urgent orders.</li><li><b>One contact.</b> A named contact for your orders, so you are not explaining your needs to a different person every time.</li></ul>"),
+            ("Request a quote",
+             "<p>Tell us what you need on our <a href=\"hospitals.html\">Hospitals and Doctors page</a>, or WhatsApp us directly. We reply with availability and a quote.</p>"),
+        ])
     service_detail("services-home-supply.html",
         "Patient Home Supply | ONCOLINK Pharma Lahore",
         "Same day home delivery of oncology, hepatology and nephrology medicines in Lahore. Order on WhatsApp, delivered to your doorstep.",
         "Patient home supply",
         "We deliver regular use medicines to the patient's doorstep, so families do not have to travel for every dose.",
-        ["We ensure prompt delivery of medicine to the patient's doorstep for regular use medicines like hepatology, nephrology and oncology drugs.",
-         "We maintain a complete record of patients with their addresses and phone numbers.",
-         "Same day orders for home supply in Lahore are delivered the same day.",
-         "Order on WhatsApp or by phone. We confirm price and availability first."])
+        [
+            ("What we deliver to your home",
+             "<p>We deliver regular use medicines for oncology, hepatology and nephrology. These are medicines patients take again and again, so a reliable home supply matters more than a one-off delivery.</p>"),
+            ("How to order",
+             "<ul><li><b>Search</b> for the medicine on this website, by brand or generic name.</li><li><b>WhatsApp or call us</b> with the name and strength. We confirm the price and availability.</li><li><b>We deliver</b> the same day in Lahore, and across Pakistan. Cold chain medicines travel in insulated packaging.</li></ul>"),
+            ("Same day in Lahore",
+             "<p>Same day orders for home supply in Lahore are delivered the same day. For other cities, WhatsApp us and we will confirm the delivery time for your city.</p>"),
+            ("Your record, kept safe",
+             "<p>We maintain a complete record of patients with their addresses and phone numbers, so repeat orders are quick and nothing is mixed up. We do not sell your details, and we do not share them with advertisers.</p>"),
+            ("Cold medicines at home",
+             "<p>If your medicine needs cold storage, it stays at 2 to 8 C in our cold room, then travels in insulated packaging with cold packs. When it arrives, put it in your fridge straight away. Read more on our <a href=\"cold-chain.html\">Cold Chain page</a>.</p>"),
+        ])
     service_detail("services-cold-chain.html",
         "Cold Chain Products | ONCOLINK Pharma Lahore",
         "Temperature controlled delivery of cancer medicines at 2 to 8 C. Solar, Wapda and generator backup, yearly calibration, insulated packaging.",
         "Cold chain products",
         "Some medicines only work if they stay cold. We keep them cold from our cold room to your door.",
-        ["We ensure temperature maintained products are delivered as per temperature requirements.",
-         "Solar system is installed as the primary source of electricity, Wapda is the second source and a generator is the third.",
-         "Calibration and validation is done each year for all refrigerators.",
-         "All temperature sensitive shipments are transported in thermostable boxes."],
+        [
+            ("How we keep medicines cold",
+             "<ul><li><b>Cold room storage.</b> Temperature sensitive medicines are stored at 2 to 8 C in our cold room.</li><li><b>Three power sources.</b> Solar system is installed as the primary source of electricity, Wapda is the second source and a generator is the third. The cold room keeps running even when the power goes out.</li><li><b>Yearly calibration.</b> Calibration and validation is done each year for all refrigerators, so the temperature you see is the temperature you get.</li><li><b>Insulated packaging.</b> All temperature sensitive shipments are transported in thermostable boxes with cold packs, so the medicine stays cold on the road.</li><li><b>Checked before dispatch.</b> A dedicated team examines each product before it leaves us.</li></ul>"),
+            ("What this means for you",
+             "<p>If your medicine needs cold storage, tell us when you order. We pack it in insulated packaging with cold packs and deliver it the same day in Lahore. When it arrives, put it in your fridge straight away, at 2 to 8 C, and follow your doctor's storage advice.</p>"),
+            ("Read the full story",
+             "<p>Our <a href=\"cold-chain.html\">Cold Chain page</a> explains the whole process, including what to do in a power cut and how to travel with a cold medicine.</p>"),
+        ],
         '<p><a href="cold-chain.html">Read more about our cold chain &rarr;</a></p>')
     service_detail("services-pharmacies.html",
         "Distribution for Pharmacies | ONCOLINK Pharma Lahore",
         "Medicine supply to leading pharmacies across Lahore. Genuine oncology and specialty products, on time delivery.",
         "Distribution for pharmacies",
         "We keep leading pharmacies in Lahore stocked, so patients can find their medicine close to home.",
-        ["We have arrangements with selected pharmaceutical companies to ensure their supplies reach all leading pharmacies of Lahore.",
-         "Pharmacies can order by phone or WhatsApp and get on time delivery.",
-         "Every product is checked before dispatch."])
+        [
+            ("How it works",
+             "<p>We have arrangements with selected pharmaceutical companies to ensure their supplies reach all leading pharmacies of Lahore. Pharmacies can order by phone or WhatsApp and get on time delivery.</p>"),
+            ("What pharmacies get",
+             "<ul><li><b>Genuine products.</b> We distribute for Bayer, Roche, Pfizer, Novartis, Sanofi, Eli Lilly, ICI, Atco, AJM and Medinet. Every product is checked before dispatch.</li><li><b>Cold chain.</b> Temperature sensitive medicines stay at 2 to 8 C, with solar, Wapda and generator backup, and yearly calibration and validation.</li><li><b>On time delivery.</b> Same day delivery in Lahore for urgent orders.</li><li><b>One contact.</b> A named contact for your orders, so you are not explaining your needs to a different person every time.</li></ul>"),
+            ("Order for your pharmacy",
+             "<p>Call +92 42 35882906 or WhatsApp +92 321 8406899 with the medicine names and quantities. We confirm price and availability, then deliver.</p>"),
+        ])
 
 def build_hospitals():
     head = "<h1>For hospitals and doctors</h1><p>Tender supply, genuine products, cold chain you can rely on. One call, and we take it from there.</p>"
-    body = f'''<div class="article">
+    body = f'''<div class="grid2">
+<div class="article">
 <p>If you run a hospital, a clinic or a pharmacy, we can be your oncology supply partner. We have supplied public sector hospitals, private hospitals and pharmacies in Lahore since 2006.</p>
 <h2>What we offer institutions</h2>
 <ul>
@@ -458,7 +511,10 @@ def build_hospitals():
 <li><b>On time delivery.</b> Same day delivery in Lahore for urgent orders.</li>
 <li><b>One contact.</b> A named contact for your orders, so you are not explaining your needs to a different person every time.</li>
 </ul>
-<h2>Request a quote</h2>
+<p>Prefer to talk? Call <a href="tel:{PHONE_TEL}">{PHONE_DISPLAY}</a> or WhatsApp <a href="https://wa.me/{WA_NUM}" target="_blank" rel="noopener">{WA_DISPLAY}</a>.</p>
+</div>
+<div class="card">
+<h3>Request a quote</h3>
 <p>Tell us what you need. We will reply with availability and a quote.</p>
 <form class="form" id="quote-form">
 <label for="qf-org">Hospital, clinic or pharmacy name</label>
@@ -468,13 +524,13 @@ def build_hospitals():
 <label for="qf-phone">Phone / WhatsApp</label>
 <input id="qf-phone" required>
 <label for="qf-type">You are a</label>
-<select id="qf-type"><option>Hospital</option><option>Clinic</option><option>Pharmacy</option><option>Doctor</option><option>Other</option></select>
+<select id="qf-type"><option value="" selected>Select...</option><option>Hospital</option><option>Clinic</option><option>Pharmacy</option><option>Doctor</option><option>Other</option></select>
 <label for="qf-msg">What do you need?</label>
 <textarea id="qf-msg" placeholder="Medicine names, quantities, how often you order..."></textarea>
 <p class="hint">Submitting opens WhatsApp with your message ready to send. We do not store your details on this website.</p>
 <button class="btn btn-wa" type="submit">Send request on WhatsApp</button>
 </form>
-<p style="margin-top:16px">Prefer to talk? Call <a href="tel:{PHONE_TEL}">{PHONE_DISPLAY}</a> or WhatsApp <a href="https://wa.me/{WA_NUM}" target="_blank" rel="noopener">{WA_DISPLAY}</a>.</p>
+</div>
 </div>'''
     return simple_page("hospitals.html",
         "For Hospitals and Doctors | ONCOLINK Pharma Lahore",
@@ -485,6 +541,12 @@ def build_cold_chain():
     head = "<h1>Cold chain, done properly</h1><p>Some medicines only work if they stay cold. We keep them at 2 to 8 C, from our cold room to your door.</p>"
     body = '''<div class="article">
 <p>Cancer medicines are sensitive. If they get warm, they can lose their effect. That is why cold chain is not a nice extra for us. It is the core of what we do.</p>
+<div class="stat-grid">
+<div class="stat"><b>2 to 8 C</b><span>Storage temperature</span></div>
+<div class="stat"><b>3</b><span>Power sources: solar, Wapda, generator</span></div>
+<div class="stat"><b>Yearly</b><span>Calibration and validation</span></div>
+<div class="stat"><b>Insulated</b><span>Packaging with cold packs</span></div>
+</div>
 <h2>How we keep medicines cold</h2>
 <ul>
 <li><b>Cold room storage.</b> Temperature sensitive medicines are stored at 2 to 8 C in our cold room.</li>
@@ -506,6 +568,11 @@ def build_patient_support():
     head = "<h1>Patient support</h1><p>Cancer treatment is hard enough. Getting the medicine should not be.</p>"
     body = '''<div class="article">
 <p>If you or a family member needs a cancer medicine, here is how we can help.</p>
+<div class="stat-grid" style="grid-template-columns:repeat(3,1fr)">
+<div class="stat"><b>1. Search</b><span>Find the medicine by brand or generic name</span></div>
+<div class="stat"><b>2. WhatsApp</b><span>We confirm price and availability</span></div>
+<div class="stat"><b>3. Delivery</b><span>Same day in Lahore, across Pakistan</span></div>
+</div>
 <h2>How to order</h2>
 <ul>
 <li><b>Search</b> for the medicine on this website, by brand or generic name.</li>
@@ -518,7 +585,7 @@ def build_patient_support():
 <h2>If a medicine is out of stock</h2>
 <p>Message us on WhatsApp. We will check with our principals and tell you when it is expected back, or suggest asking your doctor about an alternative brand with the same generic medicine.</p>
 <h2>Payment</h2>
-<p>Please call or WhatsApp us to confirm payment options for your order.</p>
+<div class="callout"><b>Payment options:</b> please call or WhatsApp us to confirm payment options for your order. We confirm the payment method when we confirm your price and availability, before you pay anything.</div>
 <p><a class="btn btn-wa" href="https://wa.me/923218406899?text=Hello%20Oncolink%2C%20I%20need%20help%20with%20a%20medicine." target="_blank" rel="noopener">WhatsApp us for help</a></p>
 </div>'''
     return simple_page("patient-support.html",
@@ -544,13 +611,13 @@ FAQS = [
 def build_faq():
     head = "<h1>Frequently asked questions</h1><p>Straight answers. If your question is not here, WhatsApp us.</p>"
     items = "".join(
-        '<div class="faq-item"><button class="faq-q">' + esc(q) + ' <span>+</span></button><div class="faq-a"><p>' + esc(a) + '</p></div></div>'
-        for q, a in FAQS)
+        '<div class="faq-item' + (' open' if i < 3 else '') + '"><button class="faq-q">' + esc(q) + ' <span>+</span></button><div class="faq-a"><p>' + esc(a) + '</p></div></div>'
+        for i, (q, a) in enumerate(FAQS))
     body = "<div>" + items + "</div>"
     return simple_page("faq.html",
         "FAQs | ONCOLINK Pharma Distributors Lahore",
         "Answers about ordering, delivery, cold chain, payment, prescriptions and returns at Oncolink Pharma Distributors, Lahore.",
-        "index.html", head, body)
+        "", head, body)
 
 def build_contact():
     head = "<h1>Contact us</h1><p>Call, WhatsApp or send a message. We reply during working hours.</p>"
@@ -568,7 +635,6 @@ def build_contact():
 <ul class="c-contact">
 <li><svg class="f-ic" viewBox="0 0 24 24" fill="none" stroke="#c9a24b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Monday to Friday: 9 AM to 6 PM<br>Saturday: 9 AM to 5 PM<br>Sunday: Closed</span></li>
 </ul>
-<p style="font-size:.9rem;color:var(--muted)">Note: our old website listed Friday closing at 7 PM. Our Google listing says 6 PM. We use 6 PM here. Please confirm by phone if you plan to visit late.</p>
 </div>
 <div class="card">
 <h3>Send us a message</h3>
@@ -593,7 +659,7 @@ def build_contact():
 def policy_page(path, title, desc, heading, html):
     head = f"<h1>{heading}</h1>"
     body = f'<div class="article">{html}</div>'
-    return simple_page(path, title, desc, "index.html", head, body)
+    return simple_page(path, title, desc, "", head, body)
 
 def build_policies():
     policy_page("privacy.html",
@@ -655,16 +721,16 @@ def build_policies():
 BLOG_POSTS = [
     ("abiraterone-price-pakistan.html", "Abiraterone price in Pakistan and where to buy it",
      "Abiraterone price in Pakistan, brands available, and how to buy it safely from a licensed distributor in Lahore.",
-     "12 Nov 2026", "Abiraterone is a medicine used in prostate cancer treatment. If your doctor has prescribed it, the first question is usually the price. Here is what it costs in Pakistan, what affects the price, and how to buy it safely."),
+     "12 Nov 2026", "Price guide", "Abiraterone is a medicine used in prostate cancer treatment. If your doctor has prescribed it, the first question is usually the price. Here is what it costs in Pakistan, what affects the price, and how to buy it safely."),
     ("store-cancer-medicine-cold-chain.html", "How to store cancer medicine at home",
      "Cold chain explained simply. How to store cancer medicine at 2 to 8 C, what to do in a power cut, and when to call your pharmacist.",
-     "12 Nov 2026", "Some cancer medicines must stay cold, at 2 to 8 C. If they get warm, they can lose their effect. Here is how to store them properly at home."),
+     "12 Nov 2026", "Storage guide", "Some cancer medicines must stay cold, at 2 to 8 C. If they get warm, they can lose their effect. Here is how to store them properly at home."),
     ("check-genuine-cancer-medicine.html", "How to check if your cancer medicine is genuine",
      "Five simple checks before you buy cancer medicine in Pakistan. Packaging, batch number, expiry, invoice and where you buy it.",
-     "12 Nov 2026", "Cancer medicines are expensive, and fake medicines are a real problem. Here are five simple checks you can do before you pay."),
+     "12 Nov 2026", "Safety guide", "Cancer medicines are expensive, and fake medicines are a real problem. Here are five simple checks you can do before you pay."),
     ("rituximab-price-pakistan.html", "Rituximab price in Pakistan: brands and availability",
      "Rituximab price in Pakistan by brand, including Ristova, Mabthera and Zytux. Availability in Lahore and how to order.",
-     "12 Nov 2026", "Rituximab is prescribed for several blood cancers and other conditions. Prices vary a lot by brand. Here is what it costs in Pakistan and how to get it."),
+     "12 Nov 2026", "Price guide", "Rituximab is prescribed for several blood cancers and other conditions. Prices vary a lot by brand. Here is what it costs in Pakistan and how to get it."),
 ]
 
 ARTICLE_BODIES = {
@@ -740,19 +806,19 @@ ARTICLE_BODIES = {
 
 def build_blog():
     cards = "".join(
-        '<div class="blog-card"><div class="date">' + d + '</div><h3><a href="blog/' + slug + '">' + esc(t) + '</a></h3><p>' + esc(desc) + '</p><a class="card-link" href="blog/' + slug + '">Read article &rarr;</a></div>'
-        for slug, t, desc, d, _ in BLOG_POSTS)
+        '<div class="blog-card"><div class="blog-head' + (' alt' if i % 2 else '') + '"><div class="tag">' + esc(tag) + '</div><div class="big-letter">' + esc(t[0]) + '</div></div><div class="blog-body"><div class="date">' + d + '</div><h3><a href="blog/' + slug + '">' + esc(t) + '</a></h3><p>' + esc(desc) + '</p><a class="card-link" href="blog/' + slug + '">Read article &rarr;</a></div></div>'
+        for i, (slug, t, desc, d, tag, _intro) in enumerate(BLOG_POSTS))
     body = f'''<div class="page-head"><div class="container"><h1>Blog: cancer medicine, simply explained</h1><p>Prices, storage, safety and patient support. Written plainly, with real prices from our shop.</p></div></div>
 <section class="section"><div class="container"><div class="blog-list">{cards}</div></div></section>
 {cta_band()}'''
     write("blog.html", page("Blog | ONCOLINK Pharma Distributors Lahore",
         "Cancer medicine prices in Pakistan, cold chain storage, and how to check genuine medicine. Plain guides from Oncolink Pharma Distributors, Lahore.",
         "blog.html", body))
-    for slug, title, desc, date, _intro in BLOG_POSTS:
+    for slug, title, desc, date, tag, _intro in BLOG_POSTS:
         art = ARTICLE_BODIES[slug]
         body = f'''<div class="page-head"><div class="container"><div class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="../blog.html">Blog</a> &rsaquo; {esc(title)}</div>
 <h1>{esc(title)}</h1><p>{date} &middot; Oncolink Pharma Distributors</p></div></div>
-<section class="section"><div class="container"><div class="article">{art}
+<section class="section"><div class="container"><div class="article"><div class="article-hero"><div class="tag">{esc(tag)}</div><p>From Oncolink Pharma Distributors, Lahore. Written plainly, with real prices from our shop.</p></div>{art}
 <p><a class="btn btn-wa" href="https://wa.me/{WA_NUM}" target="_blank" rel="noopener">Ask us about this medicine</a> &nbsp; <a class="btn btn-outline" href="../blog.html">&larr; All articles</a></p>
 </div></div></section>
 {cta_band("../")}'''

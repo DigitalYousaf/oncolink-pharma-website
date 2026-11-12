@@ -10,15 +10,6 @@
       btn.parentElement.classList.toggle('open');
     });
   });
-  // Header search redirects to shop with query
-  var hs = document.getElementById('header-search');
-  if (hs) {
-    hs.addEventListener('submit', function(e){
-      e.preventDefault();
-      var q = document.getElementById('header-search-input').value.trim();
-      window.location.href = '/shop.html' + (q ? '?q=' + encodeURIComponent(q) : '');
-    });
-  }
   var heroS = document.getElementById('hero-search');
   if (heroS) {
     heroS.addEventListener('submit', function(e){
@@ -48,7 +39,7 @@
       var org = document.getElementById('qf-org').value.trim();
       var name = document.getElementById('qf-name').value.trim();
       var phone = document.getElementById('qf-phone').value.trim();
-      var type = document.getElementById('qf-type').value;
+      var type = document.getElementById('qf-type').value || 'Not specified';
       var msg = document.getElementById('qf-msg').value.trim();
       var text = 'Hello Oncolink, hospital/pharmacy quote request. Organisation: ' + org + '. Contact person: ' + name + '. Phone: ' + phone + '. Type: ' + type + '. Details: ' + msg;
       window.open('https://wa.me/923218406899?text=' + encodeURIComponent(text), '_blank');
