@@ -10,7 +10,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "abiteron-tablet-250mg-abiraterone-acetate"
+  "slug": "abiteron-tablet-250mg-abiraterone-acetate",
+  "image": "assets/img/products/abiteron-tablet-250mg-abiraterone-acetate.webp",
+  "image_placeholder": false
  },
  {
   "name": "ABYTIGA (ABIRATERONE ACETATE)",
@@ -23,7 +25,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "abytiga-abiraterone-acetate"
+  "slug": "abytiga-abiraterone-acetate",
+  "image": "assets/img/products/abytiga-abiraterone-acetate.webp",
+  "image_placeholder": false
  },
  {
   "name": "Avastin Inj (bevacizumab)",
@@ -36,7 +40,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "avastin-inj-bevacizumab"
+  "slug": "avastin-inj-bevacizumab",
+  "image": "assets/img/products/avastin-inj-bevacizumab.webp",
+  "image_placeholder": false
  },
  {
   "name": "BITAMID TAB 50MG (BICALUTAMIDE)",
@@ -49,7 +55,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "bitamid-tab-50mg-bicalutamide"
+  "slug": "bitamid-tab-50mg-bicalutamide",
+  "image": "assets/img/products/bitamid-tab-50mg-bicalutamide.webp",
+  "image_placeholder": false
  },
  {
   "name": "BLEOCIN 15MG INJ. (Bleomycin)",
@@ -62,7 +70,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "bleocin-15mg-inj-bleomycin"
+  "slug": "bleocin-15mg-inj-bleomycin",
+  "image": "assets/img/products/bleocin-15mg-inj-bleomycin.webp",
+  "image_placeholder": false
  },
  {
   "name": "CAPCITA TAB 500MG (CAPCITABINE)",
@@ -75,7 +85,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "capcita-tab-500mg-capcitabine"
+  "slug": "capcita-tab-500mg-capcitabine",
+  "image": "assets/img/products/capcita-tab-500mg-capcitabine.webp",
+  "image_placeholder": false
  },
  {
   "name": "CARBOSOL INJ 450MG/45ML (CARBOPLATIN)",
@@ -88,7 +100,9 @@
   "in_stock": false,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "carbosol-inj-450mg-45ml-carboplatin"
+  "slug": "carbosol-inj-450mg-45ml-carboplatin",
+  "image": "assets/img/products/carbosol-inj-450mg-45ml-carboplatin.webp",
+  "image_placeholder": false
  },
  {
   "name": "CASODEX 50MG (Bicalutamide)",
@@ -101,7 +115,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "casodex-50mg-bicalutamide"
+  "slug": "casodex-50mg-bicalutamide",
+  "image": "assets/img/products/casodex-50mg-bicalutamide.webp",
+  "image_placeholder": false
  },
  {
   "name": "Casomid 50mg Tablet (Bicalutamide)",
@@ -114,7 +130,9 @@
   "in_stock": true,
   "has_price": false,
   "price_anomaly": false,
-  "slug": "casomid-50mg-tablet-bicalutamide"
+  "slug": "casomid-50mg-tablet-bicalutamide",
+  "image": "assets/img/products/casomid-50mg-tablet-bicalutamide.webp",
+  "image_placeholder": false
  },
  {
   "name": "CASPOGIN 50MG INJ (Caspofungin)",
@@ -127,7 +145,9 @@
   "in_stock": false,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "caspogin-50mg-inj-caspofungin"
+  "slug": "caspogin-50mg-inj-caspofungin",
+  "image": "assets/img/products/caspogin-50mg-inj-caspofungin.webp",
+  "image_placeholder": false
  },
  {
   "name": "CISPATIN INJ 50MG/50ML (Cisplatin)",
@@ -140,7 +160,9 @@
   "in_stock": false,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "cispatin-inj-50mg-50ml-cisplatin"
+  "slug": "cispatin-inj-50mg-50ml-cisplatin",
+  "image": "assets/img/products/cispatin-inj-50mg-50ml-cisplatin.webp",
+  "image_placeholder": false
  },
  {
   "name": "CYCLOMIDE INJ. (Cyclophosphamide)",
@@ -153,7 +175,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "cyclomide-inj-cyclophosphamide"
+  "slug": "cyclomide-inj-cyclophosphamide",
+  "image": "assets/img/products/cyclomide-inj-cyclophosphamide.webp",
+  "image_placeholder": false
  },
  {
   "name": "CYTOCIN INJ. (Cytarabine)",
@@ -166,7 +190,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "cytocin-inj-cytarabine"
+  "slug": "cytocin-inj-cytarabine",
+  "image": "assets/img/products/cytocin-inj-cytarabine.webp",
+  "image_placeholder": false
  },
  {
   "name": "CYTOROX (Cytarabine)",
@@ -179,7 +205,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "cytorox-cytarabine"
+  "slug": "cytorox-cytarabine",
+  "image": "assets/img/products/cytorox-cytarabine.webp",
+  "image_placeholder": false
  },
  {
   "name": "D-RUBICIN 50MG-INJ (Doxorubicin)",
@@ -192,7 +220,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "d-rubicin-50mg-inj-doxorubicin"
+  "slug": "d-rubicin-50mg-inj-doxorubicin",
+  "image": "assets/img/products/d-rubicin-50mg-inj-doxorubicin.webp",
+  "image_placeholder": false
  },
  {
   "name": "DARBAZINE 200MG-INJ (Dacarbazine)",
@@ -205,7 +235,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "darbazine-200mg-inj-dacarbazine"
+  "slug": "darbazine-200mg-inj-dacarbazine",
+  "image": "assets/img/products/darbazine-200mg-inj-dacarbazine.webp",
+  "image_placeholder": false
  },
  {
   "name": "DECIBINE 50mg/vial (Decitabine)",
@@ -218,7 +250,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "decibine-50mg-vial-decitabine"
+  "slug": "decibine-50mg-vial-decitabine",
+  "image": "assets/img/products/decibine-50mg-vial-decitabine.webp",
+  "image_placeholder": false
  },
  {
   "name": "DOTAXOL INJ (Docetaxel Trihydrate)",
@@ -231,7 +265,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "dotaxol-inj-docetaxel-trihydrate"
+  "slug": "dotaxol-inj-docetaxel-trihydrate",
+  "image": "assets/img/products/dotaxol-inj-docetaxel-trihydrate.webp",
+  "image_placeholder": false
  },
  {
   "name": "DoxoOnko 50mg/25ml (Doxorubicin)",
@@ -244,7 +280,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "doxoonko-50mg-25ml-doxorubicin"
+  "slug": "doxoonko-50mg-25ml-doxorubicin",
+  "image": "assets/img/products/doxoonko-50mg-25ml-doxorubicin.webp",
+  "image_placeholder": false
  },
  {
   "name": "Elbonix Tablet (Eltrombopag)",
@@ -257,7 +295,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "elbonix-tablet-eltrombopag"
+  "slug": "elbonix-tablet-eltrombopag",
+  "image": "assets/img/products/elbonix-tablet-eltrombopag.webp",
+  "image_placeholder": false
  },
  {
   "name": "ELTROM (ELTROMBOPAG)",
@@ -270,7 +310,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "eltrom-eltrombopag"
+  "slug": "eltrom-eltrombopag",
+  "image": "assets/img/products/eltrom-eltrombopag.webp",
+  "image_placeholder": false
  },
  {
   "name": "ERLONIB TAB 150MG (ERLOTINIB HCL)",
@@ -283,7 +325,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "erlonib-tab-150mg-erlotinib-hcl"
+  "slug": "erlonib-tab-150mg-erlotinib-hcl",
+  "image": "assets/img/products/erlonib-tab-150mg-erlotinib-hcl.webp",
+  "image_placeholder": false
  },
  {
   "name": "FILGEN 3 MIU INJ 2-8C (Filgrastim)",
@@ -296,7 +340,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "filgen-3-miu-inj-2-8c-filgrastim"
+  "slug": "filgen-3-miu-inj-2-8c-filgrastim",
+  "image": "assets/img/products/filgen-3-miu-inj-2-8c-filgrastim.webp",
+  "image_placeholder": false
  },
  {
   "name": "FLUROSOL INJ 500mg/10ml (5-Fluorouracil)",
@@ -309,7 +355,9 @@
   "in_stock": true,
   "has_price": false,
   "price_anomaly": true,
-  "slug": "flurosol-inj-500mg-10ml-5-fluorouracil"
+  "slug": "flurosol-inj-500mg-10ml-5-fluorouracil",
+  "image": "assets/img/products/flurosol-inj-500mg-10ml-5-fluorouracil.webp",
+  "image_placeholder": false
  },
  {
   "name": "FULVEST 250mg/5ml Inj (Fulvestrant)",
@@ -322,7 +370,9 @@
   "in_stock": false,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "fulvest-250mg-5ml-inj-fulvestrant"
+  "slug": "fulvest-250mg-5ml-inj-fulvestrant",
+  "image": "assets/img/products/fulvest-250mg-5ml-inj-fulvestrant.webp",
+  "image_placeholder": false
  },
  {
   "name": "Fulvestrant EverPharma 250mg",
@@ -335,7 +385,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "fulvestrant-everpharma-250mg"
+  "slug": "fulvestrant-everpharma-250mg",
+  "image": "assets/img/products/fulvestrant-everpharma-250mg.webp",
+  "image_placeholder": false
  },
  {
   "name": "Gazyva 1000mg (25mg/ml) (obinutuzumab)",
@@ -348,7 +400,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "gazyva-1000mg-25mg-ml-obinutuzumab"
+  "slug": "gazyva-1000mg-25mg-ml-obinutuzumab",
+  "image": "assets/img/products/gazyva-1000mg-25mg-ml-obinutuzumab.webp",
+  "image_placeholder": false
  },
  {
   "name": "GLYNIB TAB (IMATINIB)",
@@ -361,7 +415,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "glynib-tab-imatinib"
+  "slug": "glynib-tab-imatinib",
+  "image": "assets/img/products/glynib-tab-imatinib.webp",
+  "image_placeholder": false
  },
  {
   "name": "Herceptin (trastuzumab)",
@@ -374,7 +430,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "herceptin-trastuzumab"
+  "slug": "herceptin-trastuzumab",
+  "image": "assets/img/products/herceptin-trastuzumab.webp",
+  "image_placeholder": false
  },
  {
   "name": "HYDROUREA 500MG-CAP (Hydroxyurea)",
@@ -387,7 +445,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "hydrourea-500mg-cap-hydroxyurea"
+  "slug": "hydrourea-500mg-cap-hydroxyurea",
+  "image": "assets/img/products/hydrourea-500mg-cap-hydroxyurea.webp",
+  "image_placeholder": false
  },
  {
   "name": "HYDROXA CAP 500MG (HYDROXYUREA)",
@@ -400,7 +460,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "hydroxa-cap-500mg-hydroxyurea"
+  "slug": "hydroxa-cap-500mg-hydroxyurea",
+  "image": "assets/img/products/hydroxa-cap-500mg-hydroxyurea.webp",
+  "image_placeholder": false
  },
  {
   "name": "Idarubicin hcl AHP 10mg inj. (Idarubicin)",
@@ -413,7 +475,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "idarubicin-hcl-ahp-10mg-inj-idarubicin"
+  "slug": "idarubicin-hcl-ahp-10mg-inj-idarubicin",
+  "image": "assets/img/products/idarubicin-hcl-ahp-10mg-inj-idarubicin.webp",
+  "image_placeholder": false
  },
  {
   "name": "IFOSFAMIN INJ. (Ifosfamide)",
@@ -426,7 +490,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "ifosfamin-inj-ifosfamide"
+  "slug": "ifosfamin-inj-ifosfamide",
+  "image": "assets/img/products/ifosfamin-inj-ifosfamide.webp",
+  "image_placeholder": false
  },
  {
   "name": "Inj. TRASZEPTIN 440mg (Trastuzumab)",
@@ -439,7 +505,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "inj-traszeptin-440mg-trastuzumab"
+  "slug": "inj-traszeptin-440mg-trastuzumab",
+  "image": "assets/img/products/inj-traszeptin-440mg-trastuzumab.webp",
+  "image_placeholder": false
  },
  {
   "name": "IRINOSOL 100MG/5ML (IRINOTECAN)",
@@ -452,7 +520,9 @@
   "in_stock": false,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "irinosol-100mg-5ml-irinotecan"
+  "slug": "irinosol-100mg-5ml-irinotecan",
+  "image": "assets/img/products/irinosol-100mg-5ml-irinotecan.webp",
+  "image_placeholder": false
  },
  {
   "name": "Kadcyla (ado-trastuzumab emtansine)",
@@ -465,7 +535,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "kadcyla-ado-trastuzumab-emtansine"
+  "slug": "kadcyla-ado-trastuzumab-emtansine",
+  "image": "assets/img/products/kadcyla-ado-trastuzumab-emtansine.webp",
+  "image_placeholder": false
  },
  {
   "name": "Kunyrin 15mg tab (Leucovorin)",
@@ -478,7 +550,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "kunyrin-15mg-tab-leucovorin"
+  "slug": "kunyrin-15mg-tab-leucovorin",
+  "image": "assets/img/products/kunyrin-15mg-tab-leucovorin.webp",
+  "image_placeholder": false
  },
  {
   "name": "Lenvanix Capsule (Lenvatinib)",
@@ -491,7 +565,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "lenvanix-capsule-lenvatinib"
+  "slug": "lenvanix-capsule-lenvatinib",
+  "image": "assets/img/products/lenvanix-capsule-lenvatinib.webp",
+  "image_placeholder": false
  },
  {
   "name": "Letonko 2.5mg Tablet (Letrozole)",
@@ -504,7 +580,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "letonko-2-5mg-tablet-letrozole"
+  "slug": "letonko-2-5mg-tablet-letrozole",
+  "image": "assets/img/products/letonko-2-5mg-tablet-letrozole.webp",
+  "image_placeholder": false
  },
  {
   "name": "LETROZONE 2.5 MG TAB. (Letrozole)",
@@ -517,7 +595,9 @@
   "in_stock": false,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "letrozone-2-5-mg-tab-letrozole"
+  "slug": "letrozone-2-5-mg-tab-letrozole",
+  "image": "assets/img/products/letrozone-2-5-mg-tab-letrozole.webp",
+  "image_placeholder": false
  },
  {
   "name": "LEUCOCIN INJ. (Leucovorin Calcium)",
@@ -530,7 +610,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "leucocin-inj-leucovorin-calcium"
+  "slug": "leucocin-inj-leucovorin-calcium",
+  "image": "assets/img/products/leucocin-inj-leucovorin-calcium.webp",
+  "image_placeholder": false
  },
  {
   "name": "Mabthera Vial 1400mg/11.7ml SC (Rituximab)",
@@ -543,7 +625,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "mabthera-vial-1400mg-11-7ml-sc-rituximab"
+  "slug": "mabthera-vial-1400mg-11-7ml-sc-rituximab",
+  "image": "assets/img/products/mabthera-vial-1400mg-11-7ml-sc-rituximab.webp",
+  "image_placeholder": false
  },
  {
   "name": "MESNAL 400MG/4ML 15'S AMP (Mesna)",
@@ -556,7 +640,9 @@
   "in_stock": false,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "mesnal-400mg-4ml-15-s-amp-mesna"
+  "slug": "mesnal-400mg-4ml-15-s-amp-mesna",
+  "image": "assets/img/products/mesnal-400mg-4ml-15-s-amp-mesna.webp",
+  "image_placeholder": false
  },
  {
   "name": "MITOCIN 10MG-INJ (Mitomycin)",
@@ -569,7 +655,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "mitocin-10mg-inj-mitomycin"
+  "slug": "mitocin-10mg-inj-mitomycin",
+  "image": "assets/img/products/mitocin-10mg-inj-mitomycin.webp",
+  "image_placeholder": false
  },
  {
   "name": "Mydaza 100mg inj (Azacitidine)",
@@ -582,7 +670,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "mydaza-100mg-inj-azacitidine"
+  "slug": "mydaza-100mg-inj-azacitidine",
+  "image": "assets/img/products/mydaza-100mg-inj-azacitidine.webp",
+  "image_placeholder": false
  },
  {
   "name": "NAUTANT CAP (APREPITANT)",
@@ -595,7 +685,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "nautant-cap-aprepitant"
+  "slug": "nautant-cap-aprepitant",
+  "image": "assets/img/products/nautant-cap-aprepitant.webp",
+  "image_placeholder": false
  },
  {
   "name": "NILOSIGNA (NILOTINIB)",
@@ -608,7 +700,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "nilosigna-nilotinib"
+  "slug": "nilosigna-nilotinib",
+  "image": "assets/img/products/nilosigna-nilotinib.webp",
+  "image_placeholder": false
  },
  {
   "name": "NOLVADEX TABLETS 10MG (Tamoxifen)",
@@ -621,7 +715,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "nolvadex-tablets-10mg-tamoxifen"
+  "slug": "nolvadex-tablets-10mg-tamoxifen",
+  "image": "assets/img/products/nolvadex-tablets-10mg-tamoxifen.webp",
+  "image_placeholder": false
  },
  {
   "name": "Olaparix 150mg (Olaparib)",
@@ -634,7 +730,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "olaparix-150mg-olaparib"
+  "slug": "olaparix-150mg-olaparib",
+  "image": "assets/img/products/olaparix-150mg-olaparib.webp",
+  "image_placeholder": false
  },
  {
   "name": "ONCOLIB (PALBOCICLIB)",
@@ -647,7 +745,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "oncolib-palbociclib"
+  "slug": "oncolib-palbociclib",
+  "image": "assets/img/products/oncolib-palbociclib.webp",
+  "image_placeholder": false
  },
  {
   "name": "Ondansetron",
@@ -660,7 +760,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "ondansetron"
+  "slug": "ondansetron",
+  "image": "assets/img/products/ondansetron.webp",
+  "image_placeholder": false
  },
  {
   "name": "OXALIPLATIN 50MG INJ",
@@ -673,7 +775,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "oxaliplatin-50mg-inj"
+  "slug": "oxaliplatin-50mg-inj",
+  "image": "assets/img/products/oxaliplatin-50mg-inj.webp",
+  "image_placeholder": false
  },
  {
   "name": "OXALISOL (OXALIPLATIN)",
@@ -686,7 +790,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "oxalisol-oxaliplatin"
+  "slug": "oxalisol-oxaliplatin",
+  "image": "assets/img/products/oxalisol-oxaliplatin.webp",
+  "image_placeholder": false
  },
  {
   "name": "Paclitaxel",
@@ -699,7 +805,9 @@
   "in_stock": true,
   "has_price": false,
   "price_anomaly": true,
-  "slug": "paclitaxel"
+  "slug": "paclitaxel",
+  "image": "assets/img/products/paclitaxel.webp",
+  "image_placeholder": false
  },
  {
   "name": "Paclitaxel AqVida",
@@ -712,7 +820,9 @@
   "in_stock": true,
   "has_price": false,
   "price_anomaly": false,
-  "slug": "paclitaxel-aqvida"
+  "slug": "paclitaxel-aqvida",
+  "image": "assets/img/products/paclitaxel-aqvida.webp",
+  "image_placeholder": false
  },
  {
   "name": "Palbonix Capsule (Palbociclib)",
@@ -725,7 +835,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "palbonix-capsule-palbociclib"
+  "slug": "palbonix-capsule-palbociclib",
+  "image": "assets/img/products/palbonix-capsule-palbociclib.webp",
+  "image_placeholder": false
  },
  {
   "name": "PAZORENE (PAZOPANIB)",
@@ -738,7 +850,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "pazorene-pazopanib"
+  "slug": "pazorene-pazopanib",
+  "image": "assets/img/products/pazorene-pazopanib.webp",
+  "image_placeholder": false
  },
  {
   "name": "PECTIBINE 500MG (CAPECITABINE)",
@@ -751,7 +865,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "pectibine-500mg-capecitabine"
+  "slug": "pectibine-500mg-capecitabine",
+  "image": "assets/img/products/pectibine-500mg-capecitabine.webp",
+  "image_placeholder": false
  },
  {
   "name": "PEG FILGEN 6MG INJ (Peg Filgrastim)",
@@ -764,7 +880,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "peg-filgen-6mg-inj-peg-filgrastim"
+  "slug": "peg-filgen-6mg-inj-peg-filgrastim",
+  "image": "assets/img/products/peg-filgen-6mg-inj-peg-filgrastim.webp",
+  "image_placeholder": false
  },
  {
   "name": "PEMSOH 500MG INJ (PEMETREXED)",
@@ -777,7 +895,9 @@
   "in_stock": false,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "pemsoh-500mg-inj-pemetrexed"
+  "slug": "pemsoh-500mg-inj-pemetrexed",
+  "image": "assets/img/products/pemsoh-500mg-inj-pemetrexed.webp",
+  "image_placeholder": false
  },
  {
   "name": "PETAXEL INJ (PACLITAXEL)",
@@ -790,7 +910,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "petaxel-inj-paclitaxel"
+  "slug": "petaxel-inj-paclitaxel",
+  "image": "assets/img/products/petaxel-inj-paclitaxel.webp",
+  "image_placeholder": false
  },
  {
   "name": "PHARMACRISTINE INJ. (Vincristine Sulphate)",
@@ -803,7 +925,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "pharmacristine-inj-vincristine-sulphate"
+  "slug": "pharmacristine-inj-vincristine-sulphate",
+  "image": "assets/img/products/pharmacristine-inj-vincristine-sulphate.webp",
+  "image_placeholder": false
  },
  {
   "name": "PHARMATREXATE TAB. (Methotrexate Base)",
@@ -816,7 +940,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "pharmatrexate-tab-methotrexate-base"
+  "slug": "pharmatrexate-tab-methotrexate-base",
+  "image": "assets/img/products/pharmatrexate-tab-methotrexate-base.webp",
+  "image_placeholder": false
  },
  {
   "name": "Regonix 40 Tablet (Regorafenib)",
@@ -829,7 +955,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "regonix-40-tablet-regorafenib"
+  "slug": "regonix-40-tablet-regorafenib",
+  "image": "assets/img/products/regonix-40-tablet-regorafenib.webp",
+  "image_placeholder": false
  },
  {
   "name": "Ristova Vial (Rituximab)",
@@ -842,7 +970,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "ristova-vial-rituximab"
+  "slug": "ristova-vial-rituximab",
+  "image": "assets/img/products/ristova-vial-rituximab.webp",
+  "image_placeholder": false
  },
  {
   "name": "RITUXIM INJ (Rituximab)",
@@ -855,7 +985,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "rituxim-inj-rituximab"
+  "slug": "rituxim-inj-rituximab",
+  "image": "assets/img/products/rituxim-inj-rituximab.webp",
+  "image_placeholder": false
  },
  {
   "name": "SONIB TAB 200MG (SORAFENIB)",
@@ -868,7 +1000,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "sonib-tab-200mg-sorafenib"
+  "slug": "sonib-tab-200mg-sorafenib",
+  "image": "assets/img/products/sonib-tab-200mg-sorafenib.webp",
+  "image_placeholder": false
  },
  {
   "name": "Stivant Injection (Bevacizumab)",
@@ -881,7 +1015,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "stivant-injection-bevacizumab"
+  "slug": "stivant-injection-bevacizumab",
+  "image": "assets/img/products/stivant-injection-bevacizumab.webp",
+  "image_placeholder": false
  },
  {
   "name": "SUNETIC CAPSULE (SUNITINIB)",
@@ -894,7 +1030,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "sunetic-capsule-sunitinib"
+  "slug": "sunetic-capsule-sunitinib",
+  "image": "assets/img/products/sunetic-capsule-sunitinib.webp",
+  "image_placeholder": false
  },
  {
   "name": "Tab. Capecitabine Normon, 500mg",
@@ -907,7 +1045,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "tab-capecitabine-normon-500mg"
+  "slug": "tab-capecitabine-normon-500mg",
+  "image": "assets/img/products/tab-capecitabine-normon-500mg.webp",
+  "image_placeholder": false
  },
  {
   "name": "Tagrix Tablet 80mg (Osimertinib)",
@@ -920,7 +1060,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "tagrix-tablet-80mg-osimertinib"
+  "slug": "tagrix-tablet-80mg-osimertinib",
+  "image": "assets/img/products/tagrix-tablet-80mg-osimertinib.webp",
+  "image_placeholder": false
  },
  {
   "name": "Tecentriq 1200mg (20mL) (Atezolizumab)",
@@ -933,7 +1075,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "tecentriq-1200mg-20ml-atezolizumab"
+  "slug": "tecentriq-1200mg-20ml-atezolizumab",
+  "image": "assets/img/products/tecentriq-1200mg-20ml-atezolizumab.webp",
+  "image_placeholder": false
  },
  {
   "name": "TRASTUGET 440MG INJ POWDER (Trastuzumab)",
@@ -946,7 +1090,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "trastuget-440mg-inj-powder-trastuzumab"
+  "slug": "trastuget-440mg-inj-powder-trastuzumab",
+  "image": "assets/img/products/trastuget-440mg-inj-powder-trastuzumab.webp",
+  "image_placeholder": false
  },
  {
   "name": "VINBLAS 10MG-INJ. (Vinblastine Sulphate)",
@@ -959,7 +1105,9 @@
   "in_stock": false,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "vinblas-10mg-inj-vinblastine-sulphate"
+  "slug": "vinblas-10mg-inj-vinblastine-sulphate",
+  "image": "assets/img/products/vinblas-10mg-inj-vinblastine-sulphate.webp",
+  "image_placeholder": false
  },
  {
   "name": "ZEFEI 200MG INJ (GEMCITABINE HCL)",
@@ -972,7 +1120,9 @@
   "in_stock": false,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "zefei-200mg-inj-gemcitabine-hcl"
+  "slug": "zefei-200mg-inj-gemcitabine-hcl",
+  "image": "assets/img/products/zefei-200mg-inj-gemcitabine-hcl.webp",
+  "image_placeholder": false
  },
  {
   "name": "Zoldronic 4mg Inj (Zoledronic Acid)",
@@ -985,7 +1135,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "zoldronic-4mg-inj-zoledronic-acid"
+  "slug": "zoldronic-4mg-inj-zoledronic-acid",
+  "image": "assets/img/products/zoldronic-4mg-inj-zoledronic-acid.webp",
+  "image_placeholder": false
  },
  {
   "name": "ZOLOMID CAP 100MG (TEMOZOLOMIDE)",
@@ -998,7 +1150,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "zolomid-cap-100mg-temozolomide"
+  "slug": "zolomid-cap-100mg-temozolomide",
+  "image": "assets/img/products/zolomid-cap-100mg-temozolomide.webp",
+  "image_placeholder": false
  },
  {
   "name": "Zytux Injection (Rituximab)",
@@ -1011,7 +1165,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "zytux-injection-rituximab"
+  "slug": "zytux-injection-rituximab",
+  "image": "assets/img/products/zytux-injection-rituximab.webp",
+  "image_placeholder": false
  },
  {
   "name": "Leuprolide",
@@ -1024,7 +1180,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "leuprolide"
+  "slug": "leuprolide",
+  "image": "assets/img/products/leuprolide.webp",
+  "image_placeholder": false
  },
  {
   "name": "Tamoxifen",
@@ -1037,7 +1195,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "tamoxifen"
+  "slug": "tamoxifen",
+  "image": "assets/img/products/tamoxifen.webp",
+  "image_placeholder": false
  },
  {
   "name": "Cisplatin",
@@ -1050,7 +1210,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "cisplatin"
+  "slug": "cisplatin",
+  "image": "assets/img/products/cisplatin.webp",
+  "image_placeholder": false
  },
  {
   "name": "Imatinib",
@@ -1063,7 +1225,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "imatinib"
+  "slug": "imatinib",
+  "image": "assets/img/products/imatinib.webp",
+  "image_placeholder": false
  },
  {
   "name": "Biotech",
@@ -1076,7 +1240,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "biotech"
+  "slug": "biotech",
+  "image": "assets/img/products/biotech.webp",
+  "image_placeholder": false
  },
  {
   "name": "Abenix 150mg Tablet (Abemaciclib)",
@@ -1089,7 +1255,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "abenix-150mg-tablet-abemaciclib"
+  "slug": "abenix-150mg-tablet-abemaciclib",
+  "image": "assets/img/products/abenix-150mg-tablet-abemaciclib.svg",
+  "image_placeholder": true
  },
  {
   "name": "ABIRA-AHP 250mg (Abiraterone Acetate)",
@@ -1102,7 +1270,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "abira-ahp-250mg-abiraterone-acetate"
+  "slug": "abira-ahp-250mg-abiraterone-acetate",
+  "image": "assets/img/products/abira-ahp-250mg-abiraterone-acetate.webp",
+  "image_placeholder": false
  },
  {
   "name": "AHP-IRITO 100mg/5ml (Irinotecan)",
@@ -1115,7 +1285,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "ahp-irito-100mg-5ml-irinotecan"
+  "slug": "ahp-irito-100mg-5ml-irinotecan",
+  "image": "assets/img/products/ahp-irito-100mg-5ml-irinotecan.webp",
+  "image_placeholder": false
  },
  {
   "name": "Alecensa Capsule 150mg 224 PK (Alectinib)",
@@ -1128,7 +1300,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "alecensa-capsule-150mg-224-pk-alectinib"
+  "slug": "alecensa-capsule-150mg-224-pk-alectinib",
+  "image": "assets/img/products/alecensa-capsule-150mg-224-pk-alectinib.webp",
+  "image_placeholder": false
  },
  {
   "name": "ALVOSUNI (SUNITINIB)",
@@ -1141,7 +1315,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "alvosuni-sunitinib"
+  "slug": "alvosuni-sunitinib",
+  "image": "assets/img/products/alvosuni-sunitinib.webp",
+  "image_placeholder": false
  },
  {
   "name": "Apalunix 60mg Tablet (Apalutamide)",
@@ -1154,7 +1330,9 @@
   "in_stock": true,
   "has_price": false,
   "price_anomaly": false,
-  "slug": "apalunix-60mg-tablet-apalutamide"
+  "slug": "apalunix-60mg-tablet-apalutamide",
+  "image": "assets/img/products/apalunix-60mg-tablet-apalutamide.webp",
+  "image_placeholder": false
  },
  {
   "name": "ARIMIDEX TABLETS 1MG (Anastrozole)",
@@ -1167,7 +1345,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "arimidex-tablets-1mg-anastrozole"
+  "slug": "arimidex-tablets-1mg-anastrozole",
+  "image": "assets/img/products/arimidex-tablets-1mg-anastrozole.webp",
+  "image_placeholder": false
  },
  {
   "name": "Aryoseven 1.2 mg (Factor 7)",
@@ -1180,7 +1360,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "aryoseven-1-2-mg-factor-7"
+  "slug": "aryoseven-1-2-mg-factor-7",
+  "image": "assets/img/products/aryoseven-1-2-mg-factor-7.webp",
+  "image_placeholder": false
  },
  {
   "name": "Axinix 5mg Tab (Axitinib)",
@@ -1193,7 +1375,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "axinix-5mg-tab-axitinib"
+  "slug": "axinix-5mg-tab-axitinib",
+  "image": "assets/img/products/axinix-5mg-tab-axitinib.webp",
+  "image_placeholder": false
  },
  {
   "name": "Azalid 100mg Inj (Azacitidine)",
@@ -1206,7 +1390,9 @@
   "in_stock": false,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "azalid-100mg-inj-azacitidine"
+  "slug": "azalid-100mg-inj-azacitidine",
+  "image": "assets/img/products/azalid-100mg-inj-azacitidine.webp",
+  "image_placeholder": false
  },
  {
   "name": "BENDALAB 100MG INJ (Bendamustine HCl)",
@@ -1219,7 +1405,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "bendalab-100mg-inj-bendamustine-hcl"
+  "slug": "bendalab-100mg-inj-bendamustine-hcl",
+  "image": "assets/img/products/bendalab-100mg-inj-bendamustine-hcl.webp",
+  "image_placeholder": false
  },
  {
   "name": "Bevacizumab Injection",
@@ -1232,7 +1420,9 @@
   "in_stock": true,
   "has_price": false,
   "price_anomaly": false,
-  "slug": "bevacizumab-injection"
+  "slug": "bevacizumab-injection",
+  "image": "assets/img/products/bevacizumab-injection.svg",
+  "image_placeholder": true
  },
  {
   "name": "BIOSHOOT (RABIES VACCINE) 0.5ML",
@@ -1245,7 +1435,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "bioshoot-rabies-vaccine-0-5ml"
+  "slug": "bioshoot-rabies-vaccine-0-5ml",
+  "image": "assets/img/products/bioshoot-rabies-vaccine-0-5ml.webp",
+  "image_placeholder": false
  },
  {
   "name": "BLASVIN INJ 10MG/10ML (VINBLASTINE SULPHATE)",
@@ -1258,7 +1450,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "blasvin-inj-10mg-10ml-vinblastine-sulphate"
+  "slug": "blasvin-inj-10mg-10ml-vinblastine-sulphate",
+  "image": "assets/img/products/blasvin-inj-10mg-10ml-vinblastine-sulphate.svg",
+  "image_placeholder": true
  },
  {
   "name": "BLES SUSPENSION (BOVINE LIPID EXTRACT)",
@@ -1271,7 +1465,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "bles-suspension-bovine-lipid-extract"
+  "slug": "bles-suspension-bovine-lipid-extract",
+  "image": "assets/img/products/bles-suspension-bovine-lipid-extract.webp",
+  "image_placeholder": false
  },
  {
   "name": "BORTESOH 3.5MG (BORTEZOMIB)",
@@ -1284,7 +1480,9 @@
   "in_stock": false,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "bortesoh-3-5mg-bortezomib"
+  "slug": "bortesoh-3-5mg-bortezomib",
+  "image": "assets/img/products/bortesoh-3-5mg-bortezomib.webp",
+  "image_placeholder": false
  },
  {
   "name": "BORTEZOMIB 3.5MG INJ",
@@ -1297,7 +1495,9 @@
   "in_stock": false,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "bortezomib-3-5mg-inj"
+  "slug": "bortezomib-3-5mg-inj",
+  "image": "assets/img/products/bortezomib-3-5mg-inj.svg",
+  "image_placeholder": true
  },
  {
   "name": "Bortezomib Ever Pharma 3.5mg",
@@ -1310,7 +1510,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "bortezomib-ever-pharma-3-5mg"
+  "slug": "bortezomib-ever-pharma-3-5mg",
+  "image": "assets/img/products/bortezomib-ever-pharma-3-5mg.webp",
+  "image_placeholder": false
  },
  {
   "name": "Busyl 60mg/10ml Inj (Busulfan)",
@@ -1323,7 +1525,9 @@
   "in_stock": false,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "busyl-60mg-10ml-inj-busulfan"
+  "slug": "busyl-60mg-10ml-inj-busulfan",
+  "image": "assets/img/products/busyl-60mg-10ml-inj-busulfan.webp",
+  "image_placeholder": false
  },
  {
   "name": "Cabazitaxel Ever Pharma 60mg",
@@ -1336,7 +1540,9 @@
   "in_stock": true,
   "has_price": false,
   "price_anomaly": false,
-  "slug": "cabazitaxel-ever-pharma-60mg"
+  "slug": "cabazitaxel-ever-pharma-60mg",
+  "image": "assets/img/products/cabazitaxel-ever-pharma-60mg.webp",
+  "image_placeholder": false
  },
  {
   "name": "Cabozanix 20mg (Cabozanitinib)",
@@ -1349,7 +1555,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "cabozanix-20mg-cabozanitinib"
+  "slug": "cabozanix-20mg-cabozanitinib",
+  "image": "assets/img/products/cabozanix-20mg-cabozanitinib.webp",
+  "image_placeholder": false
  },
  {
   "name": "CAFOL 100MG INJ (Folinic Acid)",
@@ -1362,7 +1570,9 @@
   "in_stock": false,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "cafol-100mg-inj-folinic-acid"
+  "slug": "cafol-100mg-inj-folinic-acid",
+  "image": "assets/img/products/cafol-100mg-inj-folinic-acid.webp",
+  "image_placeholder": false
  },
  {
   "name": "Cap. Temoeirgen (Temozolomide)",
@@ -1375,7 +1585,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "cap-temoeirgen-temozolomide"
+  "slug": "cap-temoeirgen-temozolomide",
+  "image": "assets/img/products/cap-temoeirgen-temozolomide.svg",
+  "image_placeholder": true
  },
  {
   "name": "Capex 500mg Cap (Capecitabine)",
@@ -1388,7 +1600,9 @@
   "in_stock": false,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "capex-500mg-cap-capecitabine"
+  "slug": "capex-500mg-cap-capecitabine",
+  "image": "assets/img/products/capex-500mg-cap-capecitabine.webp",
+  "image_placeholder": false
  },
  {
   "name": "Carplatu (Carboplatin)",
@@ -1401,7 +1615,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "carplatu-carboplatin"
+  "slug": "carplatu-carboplatin",
+  "image": "assets/img/products/carplatu-carboplatin.webp",
+  "image_placeholder": false
  },
  {
   "name": "CELLCEPT 500MG (Mycophenolate Mofetil)",
@@ -1414,7 +1630,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "cellcept-500mg-mycophenolate-mofetil"
+  "slug": "cellcept-500mg-mycophenolate-mofetil",
+  "image": "assets/img/products/cellcept-500mg-mycophenolate-mofetil.webp",
+  "image_placeholder": false
  },
  {
   "name": "CEPLATIN 50MG-INJ. (Cisplatin)",
@@ -1427,7 +1645,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "ceplatin-50mg-inj-cisplatin"
+  "slug": "ceplatin-50mg-inj-cisplatin",
+  "image": "assets/img/products/ceplatin-50mg-inj-cisplatin.webp",
+  "image_placeholder": false
  },
  {
   "name": "Ciproxin 200 Mg/100 Ml Infusion 25c (Ciprofloxacin)",
@@ -1440,7 +1660,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "ciproxin-200-mg-100-ml-infusion-25c-ciprofloxacin"
+  "slug": "ciproxin-200-mg-100-ml-infusion-25c-ciprofloxacin",
+  "image": "assets/img/products/ciproxin-200-mg-100-ml-infusion-25c-ciprofloxacin.webp",
+  "image_placeholder": false
  },
  {
   "name": "Ciproxin Tab 25c (Ciprofloxacin)",
@@ -1453,7 +1675,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "ciproxin-tab-25c-ciprofloxacin"
+  "slug": "ciproxin-tab-25c-ciprofloxacin",
+  "image": "assets/img/products/ciproxin-tab-25c-ciprofloxacin.webp",
+  "image_placeholder": false
  },
  {
   "name": "CITA-AHP 500mg Tab (Capecitabine)",
@@ -1466,7 +1690,9 @@
   "in_stock": false,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "cita-ahp-500mg-tab-capecitabine"
+  "slug": "cita-ahp-500mg-tab-capecitabine",
+  "image": "assets/img/products/cita-ahp-500mg-tab-capecitabine.webp",
+  "image_placeholder": false
  },
  {
   "name": "CRISVIN INJ (Vincristine)",
@@ -1479,7 +1705,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "crisvin-inj-vincristine"
+  "slug": "crisvin-inj-vincristine",
+  "image": "assets/img/products/crisvin-inj-vincristine.webp",
+  "image_placeholder": false
  },
  {
   "name": "D-BLASTIN 20MG-INJ (Daunorubicin)",
@@ -1492,7 +1720,9 @@
   "in_stock": false,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "d-blastin-20mg-inj-daunorubicin"
+  "slug": "d-blastin-20mg-inj-daunorubicin",
+  "image": "assets/img/products/d-blastin-20mg-inj-daunorubicin.webp",
+  "image_placeholder": false
  },
  {
   "name": "DACTINOMYCIN KU 0.5MG INJ 25C (Dactinomycin)",
@@ -1505,7 +1735,9 @@
   "in_stock": false,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "dactinomycin-ku-0-5mg-inj-25c-dactinomycin"
+  "slug": "dactinomycin-ku-0-5mg-inj-25c-dactinomycin",
+  "image": "assets/img/products/dactinomycin-ku-0-5mg-inj-25c-dactinomycin.svg",
+  "image_placeholder": true
  },
  {
   "name": "DAPRODU TAB (Daprodustat)",
@@ -1518,7 +1750,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "daprodu-tab-daprodustat"
+  "slug": "daprodu-tab-daprodustat",
+  "image": "assets/img/products/daprodu-tab-daprodustat.webp",
+  "image_placeholder": false
  },
  {
   "name": "DENOMAB 60 MG INJ (Denosumab)",
@@ -1531,7 +1765,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "denomab-60-mg-inj-denosumab"
+  "slug": "denomab-60-mg-inj-denosumab",
+  "image": "assets/img/products/denomab-60-mg-inj-denosumab.webp",
+  "image_placeholder": false
  },
  {
   "name": "DOCEONKO INJ (Docetaxel)",
@@ -1544,7 +1780,9 @@
   "in_stock": true,
   "has_price": false,
   "price_anomaly": false,
-  "slug": "doceonko-inj-docetaxel"
+  "slug": "doceonko-inj-docetaxel",
+  "image": "assets/img/products/doceonko-inj-docetaxel.webp",
+  "image_placeholder": false
  },
  {
   "name": "Docetaxel AHP 80mg inj",
@@ -1557,7 +1795,9 @@
   "in_stock": false,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "docetaxel-ahp-80mg-inj"
+  "slug": "docetaxel-ahp-80mg-inj",
+  "image": "assets/img/products/docetaxel-ahp-80mg-inj.webp",
+  "image_placeholder": false
  },
  {
   "name": "Docetaxel AqVida",
@@ -1570,7 +1810,9 @@
   "in_stock": true,
   "has_price": false,
   "price_anomaly": false,
-  "slug": "docetaxel-aqvida"
+  "slug": "docetaxel-aqvida",
+  "image": "assets/img/products/docetaxel-aqvida.webp",
+  "image_placeholder": false
  },
  {
   "name": "Dotarem (Gadoteric Acid)",
@@ -1583,7 +1825,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "dotarem-gadoteric-acid"
+  "slug": "dotarem-gadoteric-acid",
+  "image": "assets/img/products/dotarem-gadoteric-acid.svg",
+  "image_placeholder": true
  },
  {
   "name": "DOXIANT (Docetaxel)",
@@ -1596,7 +1840,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "doxiant-docetaxel"
+  "slug": "doxiant-docetaxel",
+  "image": "assets/img/products/doxiant-docetaxel.webp",
+  "image_placeholder": false
  },
  {
   "name": "EMTA-AHP 500mg inj (Pemetrexed)",
@@ -1609,7 +1855,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "emta-ahp-500mg-inj-pemetrexed"
+  "slug": "emta-ahp-500mg-inj-pemetrexed",
+  "image": "assets/img/products/emta-ahp-500mg-inj-pemetrexed.svg",
+  "image_placeholder": true
  },
  {
   "name": "ENERCEPT 25MG INJ (Etanercept)",
@@ -1622,7 +1870,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "enercept-25mg-inj-etanercept"
+  "slug": "enercept-25mg-inj-etanercept",
+  "image": "assets/img/products/enercept-25mg-inj-etanercept.webp",
+  "image_placeholder": false
  },
  {
   "name": "ENZUMIDE 40 MG CAPSULES (Enzalutamide)",
@@ -1635,7 +1885,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "enzumide-40-mg-capsules-enzalutamide"
+  "slug": "enzumide-40-mg-capsules-enzalutamide",
+  "image": "assets/img/products/enzumide-40-mg-capsules-enzalutamide.webp",
+  "image_placeholder": false
  },
  {
   "name": "EPIAO IU INJ (RECOMBINANT HUMAN)",
@@ -1648,7 +1900,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "epiao-iu-inj-recombinant-human"
+  "slug": "epiao-iu-inj-recombinant-human",
+  "image": "assets/img/products/epiao-iu-inj-recombinant-human.webp",
+  "image_placeholder": false
  },
  {
   "name": "ETERNA 50MG INJ (Etanercept)",
@@ -1661,7 +1915,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "eterna-50mg-inj-etanercept"
+  "slug": "eterna-50mg-inj-etanercept",
+  "image": "assets/img/products/eterna-50mg-inj-etanercept.svg",
+  "image_placeholder": true
  },
  {
   "name": "Evrysdi powder 60mg/80ml (Risdiplam)",
@@ -1674,7 +1930,9 @@
   "in_stock": false,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "evrysdi-powder-60mg-80ml-risdiplam"
+  "slug": "evrysdi-powder-60mg-80ml-risdiplam",
+  "image": "assets/img/products/evrysdi-powder-60mg-80ml-risdiplam.webp",
+  "image_placeholder": false
  },
  {
   "name": "Exetu 25mg Tablet (Exemestane)",
@@ -1687,7 +1945,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "exetu-25mg-tablet-exemestane"
+  "slug": "exetu-25mg-tablet-exemestane",
+  "image": "assets/img/products/exetu-25mg-tablet-exemestane.svg",
+  "image_placeholder": true
  },
  {
   "name": "Festo V 250mg inj (Fulvestrant)",
@@ -1700,7 +1960,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "festo-v-250mg-inj-fulvestrant"
+  "slug": "festo-v-250mg-inj-fulvestrant",
+  "image": "assets/img/products/festo-v-250mg-inj-fulvestrant.webp",
+  "image_placeholder": false
  },
  {
   "name": "Flounco 500mg Inj (Fluorouracil)",
@@ -1713,7 +1975,9 @@
   "in_stock": false,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "flounco-500mg-inj-fluorouracil"
+  "slug": "flounco-500mg-inj-fluorouracil",
+  "image": "assets/img/products/flounco-500mg-inj-fluorouracil.svg",
+  "image_placeholder": true
  },
  {
   "name": "Fludarabine AHP 50mg inj",
@@ -1726,7 +1990,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "fludarabine-ahp-50mg-inj"
+  "slug": "fludarabine-ahp-50mg-inj",
+  "image": "assets/img/products/fludarabine-ahp-50mg-inj.webp",
+  "image_placeholder": false
  },
  {
   "name": "FULVEDEX 250mg/5ml PFS (Fulvedex)",
@@ -1739,7 +2005,9 @@
   "in_stock": true,
   "has_price": false,
   "price_anomaly": true,
-  "slug": "fulvedex-250mg-5ml-pfs-fulvedex"
+  "slug": "fulvedex-250mg-5ml-pfs-fulvedex",
+  "image": "assets/img/products/fulvedex-250mg-5ml-pfs-fulvedex.webp",
+  "image_placeholder": false
  },
  {
   "name": "FULVESTRANT SEACROSS 250mg/5ml PFS",
@@ -1752,7 +2020,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "fulvestrant-seacross-250mg-5ml-pfs"
+  "slug": "fulvestrant-seacross-250mg-5ml-pfs",
+  "image": "assets/img/products/fulvestrant-seacross-250mg-5ml-pfs.svg",
+  "image_placeholder": true
  },
  {
   "name": "G TANT CAP (Aprepitant USP)",
@@ -1765,7 +2035,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "g-tant-cap-aprepitant-usp"
+  "slug": "g-tant-cap-aprepitant-usp",
+  "image": "assets/img/products/g-tant-cap-aprepitant-usp.webp",
+  "image_placeholder": false
  },
  {
   "name": "GADORAY PFS (Gadobutrol)",
@@ -1778,7 +2050,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "gadoray-pfs-gadobutrol"
+  "slug": "gadoray-pfs-gadobutrol",
+  "image": "assets/img/products/gadoray-pfs-gadobutrol.webp",
+  "image_placeholder": false
  },
  {
   "name": "GEMBINE 1000 MG INJ (Gemcitabine)",
@@ -1791,7 +2065,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "gembine-1000-mg-inj-gemcitabine"
+  "slug": "gembine-1000-mg-inj-gemcitabine",
+  "image": "assets/img/products/gembine-1000-mg-inj-gemcitabine.webp",
+  "image_placeholder": false
  },
  {
   "name": "Gemontu (Gemcitabine)",
@@ -1804,7 +2080,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "gemontu-gemcitabine"
+  "slug": "gemontu-gemcitabine",
+  "image": "assets/img/products/gemontu-gemcitabine.webp",
+  "image_placeholder": false
  },
  {
   "name": "Gvec Tab (Imatinib)",
@@ -1817,7 +2095,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "gvec-tab-imatinib"
+  "slug": "gvec-tab-imatinib",
+  "image": "assets/img/products/gvec-tab-imatinib.svg",
+  "image_placeholder": true
  },
  {
   "name": "Hemlibra (Emicizumab)",
@@ -1830,7 +2110,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "hemlibra-emicizumab"
+  "slug": "hemlibra-emicizumab",
+  "image": "assets/img/products/hemlibra-emicizumab.webp",
+  "image_placeholder": false
  },
  {
   "name": "Hernix 40mg Tablet (Niratinib)",
@@ -1843,7 +2125,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "hernix-40mg-tablet-niratinib"
+  "slug": "hernix-40mg-tablet-niratinib",
+  "image": "assets/img/products/hernix-40mg-tablet-niratinib.webp",
+  "image_placeholder": false
  },
  {
   "name": "Hy-Cortisone Inj (Hydrocortisone)",
@@ -1856,7 +2140,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "hy-cortisone-inj-hydrocortisone"
+  "slug": "hy-cortisone-inj-hydrocortisone",
+  "image": "assets/img/products/hy-cortisone-inj-hydrocortisone.webp",
+  "image_placeholder": false
  },
  {
   "name": "Hy-Solone Inj 500mg (Methylsolone)",
@@ -1869,7 +2155,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "hy-solone-inj-500mg-methylsolone"
+  "slug": "hy-solone-inj-500mg-methylsolone",
+  "image": "assets/img/products/hy-solone-inj-500mg-methylsolone.webp",
+  "image_placeholder": false
  },
  {
   "name": "Hydrea 500mg",
@@ -1882,7 +2170,9 @@
   "in_stock": true,
   "has_price": false,
   "price_anomaly": false,
-  "slug": "hydrea-500mg"
+  "slug": "hydrea-500mg",
+  "image": "assets/img/products/hydrea-500mg.svg",
+  "image_placeholder": true
  },
  {
   "name": "Ibrutix Capsule 140mg (Ibrutinib)",
@@ -1895,7 +2185,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "ibrutix-capsule-140mg-ibrutinib"
+  "slug": "ibrutix-capsule-140mg-ibrutinib",
+  "image": "assets/img/products/ibrutix-capsule-140mg-ibrutinib.webp",
+  "image_placeholder": false
  },
  {
   "name": "IMADEV 400MG TAB (IMATINIB)",
@@ -1908,7 +2200,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "imadev-400mg-tab-imatinib"
+  "slug": "imadev-400mg-tab-imatinib",
+  "image": "assets/img/products/imadev-400mg-tab-imatinib.webp",
+  "image_placeholder": false
  },
  {
   "name": "IMATIGLIV (IMATINIB)",
@@ -1921,7 +2215,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "imatigliv-imatinib"
+  "slug": "imatigliv-imatinib",
+  "image": "assets/img/products/imatigliv-imatinib.webp",
+  "image_placeholder": false
  },
  {
   "name": "Inj Albuman 20% 100ml",
@@ -1934,7 +2230,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "inj-albuman-20-100ml"
+  "slug": "inj-albuman-20-100ml",
+  "image": "assets/img/products/inj-albuman-20-100ml.webp",
+  "image_placeholder": false
  },
  {
   "name": "Inj. BEVEC Vial (Bevacizumab)",
@@ -1947,7 +2245,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "inj-bevec-vial-bevacizumab"
+  "slug": "inj-bevec-vial-bevacizumab",
+  "image": "assets/img/products/inj-bevec-vial-bevacizumab.svg",
+  "image_placeholder": true
  },
  {
   "name": "Inj. Biodoce (Docetaxel)",
@@ -1960,7 +2260,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "inj-biodoce-docetaxel"
+  "slug": "inj-biodoce-docetaxel",
+  "image": "assets/img/products/inj-biodoce-docetaxel.svg",
+  "image_placeholder": true
  },
  {
   "name": "Inj. Biopac (Paclitaxel)",
@@ -1973,7 +2275,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "inj-biopac-paclitaxel"
+  "slug": "inj-biopac-paclitaxel",
+  "image": "assets/img/products/inj-biopac-paclitaxel.svg",
+  "image_placeholder": true
  },
  {
   "name": "Inj. Lutrate, 22.5mg (Leuprolide Acetate)",
@@ -1986,7 +2290,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "inj-lutrate-22-5mg-leuprolide-acetate"
+  "slug": "inj-lutrate-22-5mg-leuprolide-acetate",
+  "image": "assets/img/products/inj-lutrate-22-5mg-leuprolide-acetate.svg",
+  "image_placeholder": true
  },
  {
   "name": "INTRAPAQUE 100ML 320MG (Iodixanol)",
@@ -1999,7 +2305,9 @@
   "in_stock": false,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "intrapaque-100ml-320mg-iodixanol"
+  "slug": "intrapaque-100ml-320mg-iodixanol",
+  "image": "assets/img/products/intrapaque-100ml-320mg-iodixanol.svg",
+  "image_placeholder": true
  },
  {
   "name": "JAKLITINIB (Ruxolitinib)",
@@ -2012,7 +2320,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "jaklitinib-ruxolitinib"
+  "slug": "jaklitinib-ruxolitinib",
+  "image": "assets/img/products/jaklitinib-ruxolitinib.webp",
+  "image_placeholder": false
  },
  {
   "name": "JFK Caps (Ruxolitinib)",
@@ -2025,7 +2335,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "jfk-caps-ruxolitinib"
+  "slug": "jfk-caps-ruxolitinib",
+  "image": "assets/img/products/jfk-caps-ruxolitinib.webp",
+  "image_placeholder": false
  },
  {
   "name": "Kunyrin 100mg Inj (Leucovorin)",
@@ -2038,7 +2350,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "kunyrin-100mg-inj-leucovorin"
+  "slug": "kunyrin-100mg-inj-leucovorin",
+  "image": "assets/img/products/kunyrin-100mg-inj-leucovorin.webp",
+  "image_placeholder": false
  },
  {
   "name": "KYTRIL 3MG/3ML INJ (GRANISETRON)",
@@ -2051,7 +2365,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "kytril-3mg-3ml-inj-granisetron"
+  "slug": "kytril-3mg-3ml-inj-granisetron",
+  "image": "assets/img/products/kytril-3mg-3ml-inj-granisetron.webp",
+  "image_placeholder": false
  },
  {
   "name": "KYTRIL TAB 1 MG (GRANISETRON)",
@@ -2064,7 +2380,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "kytril-tab-1-mg-granisetron"
+  "slug": "kytril-tab-1-mg-granisetron",
+  "image": "assets/img/products/kytril-tab-1-mg-granisetron.webp",
+  "image_placeholder": false
  },
  {
   "name": "LEMIRYL (LENALIDOMIDE)",
@@ -2077,7 +2395,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "lemiryl-lenalidomide"
+  "slug": "lemiryl-lenalidomide",
+  "image": "assets/img/products/lemiryl-lenalidomide.webp",
+  "image_placeholder": false
  },
  {
   "name": "LENMID 10MG (LENALIDOMIDE 10MG)",
@@ -2090,7 +2410,9 @@
   "in_stock": false,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "lenmid-10mg-lenalidomide-10mg"
+  "slug": "lenmid-10mg-lenalidomide-10mg",
+  "image": "assets/img/products/lenmid-10mg-lenalidomide-10mg.webp",
+  "image_placeholder": false
  },
  {
   "name": "LENVAGEN TAB (LENVATINIB)",
@@ -2103,7 +2425,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "lenvagen-tab-lenvatinib"
+  "slug": "lenvagen-tab-lenvatinib",
+  "image": "assets/img/products/lenvagen-tab-lenvatinib.webp",
+  "image_placeholder": false
  },
  {
   "name": "LEPTA TAB 250MG (LAPATINIB)",
@@ -2116,7 +2440,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "lepta-tab-250mg-lapatinib"
+  "slug": "lepta-tab-250mg-lapatinib",
+  "image": "assets/img/products/lepta-tab-250mg-lapatinib.webp",
+  "image_placeholder": false
  },
  {
   "name": "Linamide Capsule (Lenalidomide)",
@@ -2129,7 +2455,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "linamide-capsule-lenalidomide"
+  "slug": "linamide-capsule-lenalidomide",
+  "image": "assets/img/products/linamide-capsule-lenalidomide.webp",
+  "image_placeholder": false
  },
  {
   "name": "LUPRODEX (Leuprolide Acetate)",
@@ -2142,7 +2470,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "luprodex-leuprolide-acetate"
+  "slug": "luprodex-leuprolide-acetate",
+  "image": "assets/img/products/luprodex-leuprolide-acetate.svg",
+  "image_placeholder": true
  },
  {
   "name": "MACABI Tab 50mg (Bicalutamide)",
@@ -2155,7 +2485,9 @@
   "in_stock": false,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "macabi-tab-50mg-bicalutamide"
+  "slug": "macabi-tab-50mg-bicalutamide",
+  "image": "assets/img/products/macabi-tab-50mg-bicalutamide.svg",
+  "image_placeholder": true
  },
  {
   "name": "MACDOXILIP INJ 20MG/10ML (LIPOSOMAL DOXORUBICIN)",
@@ -2168,7 +2500,9 @@
   "in_stock": true,
   "has_price": false,
   "price_anomaly": false,
-  "slug": "macdoxilip-inj-20mg-10ml-liposomal-doxorubicin"
+  "slug": "macdoxilip-inj-20mg-10ml-liposomal-doxorubicin",
+  "image": "assets/img/products/macdoxilip-inj-20mg-10ml-liposomal-doxorubicin.webp",
+  "image_placeholder": false
  },
  {
   "name": "MACDRONIC INJ (ZOLEDRONIC ACID)",
@@ -2181,7 +2515,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "macdronic-inj-zoledronic-acid"
+  "slug": "macdronic-inj-zoledronic-acid",
+  "image": "assets/img/products/macdronic-inj-zoledronic-acid.webp",
+  "image_placeholder": false
  },
  {
   "name": "MERCAPRINE 50MG-TAB (Mercaptopurine)",
@@ -2194,7 +2530,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "mercaprine-50mg-tab-mercaptopurine"
+  "slug": "mercaprine-50mg-tab-mercaptopurine",
+  "image": "assets/img/products/mercaprine-50mg-tab-mercaptopurine.webp",
+  "image_placeholder": false
  },
  {
   "name": "MERPEN INJ (Meropenem)",
@@ -2207,7 +2545,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "merpen-inj-meropenem"
+  "slug": "merpen-inj-meropenem",
+  "image": "assets/img/products/merpen-inj-meropenem.webp",
+  "image_placeholder": false
  },
  {
   "name": "Mircera Injection (methoxy polyethylene glycol)",
@@ -2220,7 +2560,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "mircera-injection-methoxy-polyethylene-glycol"
+  "slug": "mircera-injection-methoxy-polyethylene-glycol",
+  "image": "assets/img/products/mircera-injection-methoxy-polyethylene-glycol.webp",
+  "image_placeholder": false
  },
  {
   "name": "MITOMYCIN 10 MG INJ KU 15-30C (Mitomycin C)",
@@ -2233,7 +2575,9 @@
   "in_stock": false,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "mitomycin-10-mg-inj-ku-15-30c-mitomycin-c"
+  "slug": "mitomycin-10-mg-inj-ku-15-30c-mitomycin-c",
+  "image": "assets/img/products/mitomycin-10-mg-inj-ku-15-30c-mitomycin-c.webp",
+  "image_placeholder": false
  },
  {
   "name": "MONOPAQUE INJ (Iohexol)",
@@ -2246,7 +2590,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "monopaque-inj-iohexol"
+  "slug": "monopaque-inj-iohexol",
+  "image": "assets/img/products/monopaque-inj-iohexol.webp",
+  "image_placeholder": false
  },
  {
   "name": "Mucaine Susp 150ml PET (Aluminium hydroxide Magnesium)",
@@ -2259,7 +2605,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "mucaine-susp-150ml-pet-aluminium-hydroxide-magnesium"
+  "slug": "mucaine-susp-150ml-pet-aluminium-hydroxide-magnesium",
+  "image": "assets/img/products/mucaine-susp-150ml-pet-aluminium-hydroxide-magnesium.webp",
+  "image_placeholder": false
  },
  {
   "name": "MYLONIB (RUXOLITINIB)",
@@ -2272,7 +2620,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "mylonib-ruxolitinib"
+  "slug": "mylonib-ruxolitinib",
+  "image": "assets/img/products/mylonib-ruxolitinib.webp",
+  "image_placeholder": false
  },
  {
   "name": "NAB PACLID 100MG IV INJ (Paclitaxel)",
@@ -2285,7 +2635,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "nab-paclid-100mg-iv-inj-paclitaxel"
+  "slug": "nab-paclid-100mg-iv-inj-paclitaxel",
+  "image": "assets/img/products/nab-paclid-100mg-iv-inj-paclitaxel.webp",
+  "image_placeholder": false
  },
  {
   "name": "Naprocap 500mg Tab (Capecitabine)",
@@ -2298,7 +2650,9 @@
   "in_stock": false,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "naprocap-500mg-tab-capecitabine"
+  "slug": "naprocap-500mg-tab-capecitabine",
+  "image": "assets/img/products/naprocap-500mg-tab-capecitabine.webp",
+  "image_placeholder": false
  },
  {
   "name": "Naprodox 50mg inj (Doxorubicin)",
@@ -2311,7 +2665,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "naprodox-50mg-inj-doxorubicin"
+  "slug": "naprodox-50mg-inj-doxorubicin",
+  "image": "assets/img/products/naprodox-50mg-inj-doxorubicin.svg",
+  "image_placeholder": true
  },
  {
   "name": "Neofil 300 Mg Inj (Filgrastim)",
@@ -2324,7 +2680,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "neofil-300-mg-inj-filgrastim"
+  "slug": "neofil-300-mg-inj-filgrastim",
+  "image": "assets/img/products/neofil-300-mg-inj-filgrastim.webp",
+  "image_placeholder": false
  },
  {
   "name": "NEXAVAR 200 MG TAB 25C (60,S) (Sorafenib)",
@@ -2337,7 +2695,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "nexavar-200-mg-tab-25c-60-s-sorafenib"
+  "slug": "nexavar-200-mg-tab-25c-60-s-sorafenib",
+  "image": "assets/img/products/nexavar-200-mg-tab-25c-60-s-sorafenib.webp",
+  "image_placeholder": false
  },
  {
   "name": "Nilonix capsule (Nilotinib)",
@@ -2350,7 +2710,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "nilonix-capsule-nilotinib"
+  "slug": "nilonix-capsule-nilotinib",
+  "image": "assets/img/products/nilonix-capsule-nilotinib.webp",
+  "image_placeholder": false
  },
  {
   "name": "Nilstat Drops 50ml (Nystatin)",
@@ -2363,7 +2725,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "nilstat-drops-50ml-nystatin"
+  "slug": "nilstat-drops-50ml-nystatin",
+  "image": "assets/img/products/nilstat-drops-50ml-nystatin.webp",
+  "image_placeholder": false
  },
  {
   "name": "Niraparix 100mg Capsule (Niraparib)",
@@ -2376,7 +2740,9 @@
   "in_stock": false,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "niraparix-100mg-capsule-niraparib"
+  "slug": "niraparix-100mg-capsule-niraparib",
+  "image": "assets/img/products/niraparix-100mg-capsule-niraparib.webp",
+  "image_placeholder": false
  },
  {
   "name": "NITONIB (NILOTINIB)",
@@ -2389,7 +2755,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "nitonib-nilotinib"
+  "slug": "nitonib-nilotinib",
+  "image": "assets/img/products/nitonib-nilotinib.svg",
+  "image_placeholder": true
  },
  {
   "name": "Ocladra 2mg/ml Inj (Cladribine)",
@@ -2402,7 +2770,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "ocladra-2mg-ml-inj-cladribine"
+  "slug": "ocladra-2mg-ml-inj-cladribine",
+  "image": "assets/img/products/ocladra-2mg-ml-inj-cladribine.webp",
+  "image_placeholder": false
  },
  {
   "name": "Ocrevus Injection 300mg/10ml (Ocrelizumab)",
@@ -2415,7 +2785,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "ocrevus-injection-300mg-10ml-ocrelizumab"
+  "slug": "ocrevus-injection-300mg-10ml-ocrelizumab",
+  "image": "assets/img/products/ocrevus-injection-300mg-10ml-ocrelizumab.webp",
+  "image_placeholder": false
  },
  {
   "name": "ODEROX TAB (DEFERASIROX)",
@@ -2428,7 +2800,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "oderox-tab-deferasirox"
+  "slug": "oderox-tab-deferasirox",
+  "image": "assets/img/products/oderox-tab-deferasirox.webp",
+  "image_placeholder": false
  },
  {
   "name": "OMNIVEST INJ GADOPENTATE (Gadopentetate)",
@@ -2441,7 +2815,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "omnivest-inj-gadopentate-gadopentetate"
+  "slug": "omnivest-inj-gadopentate-gadopentetate",
+  "image": "assets/img/products/omnivest-inj-gadopentate-gadopentetate.webp",
+  "image_placeholder": false
  },
  {
   "name": "Oncofos 1g Powder Inj (Cyclophosphamide)",
@@ -2454,7 +2830,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "oncofos-1g-powder-inj-cyclophosphamide"
+  "slug": "oncofos-1g-powder-inj-cyclophosphamide",
+  "image": "assets/img/products/oncofos-1g-powder-inj-cyclophosphamide.webp",
+  "image_placeholder": false
  },
  {
   "name": "ONSET 8MG-TAB. (Ondansetron)",
@@ -2467,7 +2845,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "onset-8mg-tab-ondansetron"
+  "slug": "onset-8mg-tab-ondansetron",
+  "image": "assets/img/products/onset-8mg-tab-ondansetron.webp",
+  "image_placeholder": false
  },
  {
   "name": "ONSET INJ. (Ondansetron)",
@@ -2480,7 +2860,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "onset-inj-ondansetron"
+  "slug": "onset-inj-ondansetron",
+  "image": "assets/img/products/onset-inj-ondansetron.webp",
+  "image_placeholder": false
  },
  {
   "name": "ONSET ORAL SOLUTION 25ML",
@@ -2493,7 +2875,9 @@
   "in_stock": false,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "onset-oral-solution-25ml"
+  "slug": "onset-oral-solution-25ml",
+  "image": "assets/img/products/onset-oral-solution-25ml.webp",
+  "image_placeholder": false
  },
  {
   "name": "OSEMAB 120 MG INJ (Denusomab)",
@@ -2506,7 +2890,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "osemab-120-mg-inj-denusomab"
+  "slug": "osemab-120-mg-inj-denusomab",
+  "image": "assets/img/products/osemab-120-mg-inj-denusomab.webp",
+  "image_placeholder": false
  },
  {
   "name": "Oxaliplatin AHP 100mg inj",
@@ -2519,7 +2905,9 @@
   "in_stock": true,
   "has_price": false,
   "price_anomaly": false,
-  "slug": "oxaliplatin-ahp-100mg-inj"
+  "slug": "oxaliplatin-ahp-100mg-inj",
+  "image": "assets/img/products/oxaliplatin-ahp-100mg-inj.webp",
+  "image_placeholder": false
  },
  {
   "name": "Oxaliplatin AqVida",
@@ -2532,7 +2920,9 @@
   "in_stock": true,
   "has_price": false,
   "price_anomaly": false,
-  "slug": "oxaliplatin-aqvida"
+  "slug": "oxaliplatin-aqvida",
+  "image": "assets/img/products/oxaliplatin-aqvida.webp",
+  "image_placeholder": false
  },
  {
   "name": "PACLITAX INJ. (Paclitaxel)",
@@ -2545,7 +2935,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "paclitax-inj-paclitaxel"
+  "slug": "paclitax-inj-paclitaxel",
+  "image": "assets/img/products/paclitax-inj-paclitaxel.webp",
+  "image_placeholder": false
  },
  {
   "name": "Paclitaxel AHP inj",
@@ -2558,7 +2950,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "paclitaxel-ahp-inj"
+  "slug": "paclitaxel-ahp-inj",
+  "image": "assets/img/products/paclitaxel-ahp-inj.svg",
+  "image_placeholder": true
  },
  {
   "name": "PACNOGEN (Paclitaxel)",
@@ -2571,7 +2965,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "pacnogen-paclitaxel"
+  "slug": "pacnogen-paclitaxel",
+  "image": "assets/img/products/pacnogen-paclitaxel.webp",
+  "image_placeholder": false
  },
  {
   "name": "PEGASPARAGASE 3750IU/5ML INJ (PEG L Asparaginase)",
@@ -2584,7 +2980,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "pegasparagase-3750iu-5ml-inj-peg-l-asparaginase"
+  "slug": "pegasparagase-3750iu-5ml-inj-peg-l-asparaginase",
+  "image": "assets/img/products/pegasparagase-3750iu-5ml-inj-peg-l-asparaginase.webp",
+  "image_placeholder": false
  },
  {
   "name": "PEGSTIM 6MG INJ (PEG FILGRASTIM)",
@@ -2597,7 +2995,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "pegstim-6mg-inj-peg-filgrastim"
+  "slug": "pegstim-6mg-inj-peg-filgrastim",
+  "image": "assets/img/products/pegstim-6mg-inj-peg-filgrastim.webp",
+  "image_placeholder": false
  },
  {
   "name": "PERGINASE 10000 IU INJ 25C (Asparaginase)",
@@ -2610,7 +3010,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "perginase-10000-iu-inj-25c-asparaginase"
+  "slug": "perginase-10000-iu-inj-25c-asparaginase",
+  "image": "assets/img/products/perginase-10000-iu-inj-25c-asparaginase.webp",
+  "image_placeholder": false
  },
  {
   "name": "Perjeta 420 mg (30mg/ml) (pertuzumab)",
@@ -2623,7 +3025,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "perjeta-420-mg-30mg-ml-pertuzumab"
+  "slug": "perjeta-420-mg-30mg-ml-pertuzumab",
+  "image": "assets/img/products/perjeta-420-mg-30mg-ml-pertuzumab.webp",
+  "image_placeholder": false
  },
  {
   "name": "PHARMAPLATIN 150MG INJ (Carboplatin)",
@@ -2636,7 +3040,9 @@
   "in_stock": false,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "pharmaplatin-150mg-inj-carboplatin"
+  "slug": "pharmaplatin-150mg-inj-carboplatin",
+  "image": "assets/img/products/pharmaplatin-150mg-inj-carboplatin.webp",
+  "image_placeholder": false
  },
  {
   "name": "PHARMATREXATE 50MG-INJ. (Methotrexate Sodium)",
@@ -2649,7 +3055,9 @@
   "in_stock": true,
   "has_price": false,
   "price_anomaly": true,
-  "slug": "pharmatrexate-50mg-inj-methotrexate-sodium"
+  "slug": "pharmatrexate-50mg-inj-methotrexate-sodium",
+  "image": "assets/img/products/pharmatrexate-50mg-inj-methotrexate-sodium.webp",
+  "image_placeholder": false
  },
  {
   "name": "PHARMAURACIL INJ. (Fluorouracil)",
@@ -2662,7 +3070,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "pharmauracil-inj-fluorouracil"
+  "slug": "pharmauracil-inj-fluorouracil",
+  "image": "assets/img/products/pharmauracil-inj-fluorouracil.webp",
+  "image_placeholder": false
  },
  {
   "name": "Phesgo (Pertuzumab / Trastuzumab)",
@@ -2675,7 +3085,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "phesgo-pertuzumab-trastuzumab"
+  "slug": "phesgo-pertuzumab-trastuzumab",
+  "image": "assets/img/products/phesgo-pertuzumab-trastuzumab.webp",
+  "image_placeholder": false
  },
  {
   "name": "PNP 400mg Tab (Pazopanib)",
@@ -2688,7 +3100,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "pnp-400mg-tab-pazopanib"
+  "slug": "pnp-400mg-tab-pazopanib",
+  "image": "assets/img/products/pnp-400mg-tab-pazopanib.webp",
+  "image_placeholder": false
  },
  {
   "name": "Polivy 140mg vial (Polatuzumab)",
@@ -2701,7 +3115,9 @@
   "in_stock": false,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "polivy-140mg-vial-polatuzumab"
+  "slug": "polivy-140mg-vial-polatuzumab",
+  "image": "assets/img/products/polivy-140mg-vial-polatuzumab.webp",
+  "image_placeholder": false
  },
  {
   "name": "Ponatinix Tablet (Ponatinib)",
@@ -2714,7 +3130,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "ponatinix-tablet-ponatinib"
+  "slug": "ponatinix-tablet-ponatinib",
+  "image": "assets/img/products/ponatinix-tablet-ponatinib.webp",
+  "image_placeholder": false
  },
  {
   "name": "PRIMOVIST 0.25 MMOL/ML 10ML (Gadoxetate Disodium)",
@@ -2727,7 +3145,9 @@
   "in_stock": false,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "primovist-0-25-mmol-ml-10ml-gadoxetate-disodium"
+  "slug": "primovist-0-25-mmol-ml-10ml-gadoxetate-disodium",
+  "image": "assets/img/products/primovist-0-25-mmol-ml-10ml-gadoxetate-disodium.webp",
+  "image_placeholder": false
  },
  {
   "name": "Referox Tab (Deferasirox)",
@@ -2740,7 +3160,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "referox-tab-deferasirox"
+  "slug": "referox-tab-deferasirox",
+  "image": "assets/img/products/referox-tab-deferasirox.webp",
+  "image_placeholder": false
  },
  {
   "name": "ROTAFOS INJ (Ifosfamide)",
@@ -2753,7 +3175,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "rotafos-inj-ifosfamide"
+  "slug": "rotafos-inj-ifosfamide",
+  "image": "assets/img/products/rotafos-inj-ifosfamide.webp",
+  "image_placeholder": false
  },
  {
   "name": "Rotigna Cap (Nilotinib)",
@@ -2766,7 +3190,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "rotigna-cap-nilotinib"
+  "slug": "rotigna-cap-nilotinib",
+  "image": "assets/img/products/rotigna-cap-nilotinib.svg",
+  "image_placeholder": true
  },
  {
   "name": "Rozlytrek Cap (Entrectinib)",
@@ -2779,7 +3205,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "rozlytrek-cap-entrectinib"
+  "slug": "rozlytrek-cap-entrectinib",
+  "image": "assets/img/products/rozlytrek-cap-entrectinib.webp",
+  "image_placeholder": false
  },
  {
   "name": "RUBISOL INJ (EPIRUBICIN HCL)",
@@ -2792,7 +3220,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "rubisol-inj-epirubicin-hcl"
+  "slug": "rubisol-inj-epirubicin-hcl",
+  "image": "assets/img/products/rubisol-inj-epirubicin-hcl.webp",
+  "image_placeholder": false
  },
  {
   "name": "SEGLUTIDE INJ (SEMAGLUTIDE)",
@@ -2805,7 +3235,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "seglutide-inj-semaglutide"
+  "slug": "seglutide-inj-semaglutide",
+  "image": "assets/img/products/seglutide-inj-semaglutide.webp",
+  "image_placeholder": false
  },
  {
   "name": "Simbiote 3.5mg inj (Bortezomib)",
@@ -2818,7 +3250,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "simbiote-3-5mg-inj-bortezomib"
+  "slug": "simbiote-3-5mg-inj-bortezomib",
+  "image": "assets/img/products/simbiote-3-5mg-inj-bortezomib.webp",
+  "image_placeholder": false
  },
  {
   "name": "Stanem Inj 500mg (Cilastatin, Imipenem)",
@@ -2831,7 +3265,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "stanem-inj-500mg-cilastatin-imipenem"
+  "slug": "stanem-inj-500mg-cilastatin-imipenem",
+  "image": "assets/img/products/stanem-inj-500mg-cilastatin-imipenem.webp",
+  "image_placeholder": false
  },
  {
   "name": "Tarceva Tablets (erlotinib)",
@@ -2844,7 +3280,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "tarceva-tablets-erlotinib"
+  "slug": "tarceva-tablets-erlotinib",
+  "image": "assets/img/products/tarceva-tablets-erlotinib.webp",
+  "image_placeholder": false
  },
  {
   "name": "TARSINIB TAB (ERLOTINIB HCL)",
@@ -2857,7 +3295,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "tarsinib-tab-erlotinib-hcl"
+  "slug": "tarsinib-tab-erlotinib-hcl",
+  "image": "assets/img/products/tarsinib-tab-erlotinib-hcl.webp",
+  "image_placeholder": false
  },
  {
   "name": "Tazopip Inj (Piperacillin)",
@@ -2870,7 +3310,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "tazopip-inj-piperacillin"
+  "slug": "tazopip-inj-piperacillin",
+  "image": "assets/img/products/tazopip-inj-piperacillin.webp",
+  "image_placeholder": false
  },
  {
   "name": "TEMOREL CAP (TEMOZOLAMIDE)",
@@ -2883,7 +3325,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "temorel-cap-temozolamide"
+  "slug": "temorel-cap-temozolamide",
+  "image": "assets/img/products/temorel-cap-temozolamide.webp",
+  "image_placeholder": false
  },
  {
   "name": "THALIMID CAP 100MG (THALIDOMIDE)",
@@ -2896,7 +3340,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "thalimid-cap-100mg-thalidomide"
+  "slug": "thalimid-cap-100mg-thalidomide",
+  "image": "assets/img/products/thalimid-cap-100mg-thalidomide.webp",
+  "image_placeholder": false
  },
  {
   "name": "Thymoglobuline 25mg Vial 1's (Anti-Thymocyte Globulin (Rabbit))",
@@ -2909,7 +3355,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "thymoglobuline-25mg-vial-1-s-anti-thymocyte-globulin-rabbit"
+  "slug": "thymoglobuline-25mg-vial-1-s-anti-thymocyte-globulin-rabbit",
+  "image": "assets/img/products/thymoglobuline-25mg-vial-1-s-anti-thymocyte-globulin-rabbit.svg",
+  "image_placeholder": true
  },
  {
   "name": "TOPOSIDE 100 MG/5 ML INJ (Etoposide)",
@@ -2922,7 +3370,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "toposide-100-mg-5-ml-inj-etoposide"
+  "slug": "toposide-100-mg-5-ml-inj-etoposide",
+  "image": "assets/img/products/toposide-100-mg-5-ml-inj-etoposide.webp",
+  "image_placeholder": false
  },
  {
   "name": "TREXATE INJ (METHOTREXATE)",
@@ -2935,7 +3385,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "trexate-inj-methotrexate"
+  "slug": "trexate-inj-methotrexate",
+  "image": "assets/img/products/trexate-inj-methotrexate.webp",
+  "image_placeholder": false
  },
  {
   "name": "TREXATE TAB (METHOTREXATE)",
@@ -2948,7 +3400,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "trexate-tab-methotrexate"
+  "slug": "trexate-tab-methotrexate",
+  "image": "assets/img/products/trexate-tab-methotrexate.svg",
+  "image_placeholder": true
  },
  {
   "name": "UPAGET 15MG TAB XR (Upadacitinib)",
@@ -2961,7 +3415,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "upaget-15mg-tab-xr-upadacitinib"
+  "slug": "upaget-15mg-tab-xr-upadacitinib",
+  "image": "assets/img/products/upaget-15mg-tab-xr-upadacitinib.webp",
+  "image_placeholder": false
  },
  {
   "name": "Valcyte Tablets 450mg (valganciclovir)",
@@ -2974,7 +3430,9 @@
   "in_stock": false,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "valcyte-tablets-450mg-valganciclovir"
+  "slug": "valcyte-tablets-450mg-valganciclovir",
+  "image": "assets/img/products/valcyte-tablets-450mg-valganciclovir.webp",
+  "image_placeholder": false
  },
  {
   "name": "VELTEZO 3.5MG (BORTEZUMIB)",
@@ -2987,7 +3445,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "veltezo-3-5mg-bortezumib"
+  "slug": "veltezo-3-5mg-bortezumib",
+  "image": "assets/img/products/veltezo-3-5mg-bortezumib.webp",
+  "image_placeholder": false
  },
  {
   "name": "VINOBIN 50MG/5ML (VINORELBINE)",
@@ -3000,7 +3460,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "vinobin-50mg-5ml-vinorelbine"
+  "slug": "vinobin-50mg-5ml-vinorelbine",
+  "image": "assets/img/products/vinobin-50mg-5ml-vinorelbine.webp",
+  "image_placeholder": false
  },
  {
   "name": "VOPAZZI TAB (PAZOPANIB)",
@@ -3013,7 +3475,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "vopazzi-tab-pazopanib"
+  "slug": "vopazzi-tab-pazopanib",
+  "image": "assets/img/products/vopazzi-tab-pazopanib.webp",
+  "image_placeholder": false
  },
  {
   "name": "XELOTAB TABLETS 500 MG (Capecitabine)",
@@ -3026,7 +3490,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "xelotab-tablets-500-mg-capecitabine"
+  "slug": "xelotab-tablets-500-mg-capecitabine",
+  "image": "assets/img/products/xelotab-tablets-500-mg-capecitabine.webp",
+  "image_placeholder": false
  },
  {
   "name": "Xelpac Inj (Carboplatin)",
@@ -3039,7 +3505,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "xelpac-inj-carboplatin"
+  "slug": "xelpac-inj-carboplatin",
+  "image": "assets/img/products/xelpac-inj-carboplatin.webp",
+  "image_placeholder": false
  },
  {
   "name": "Xenetix Inj 350/100ml (Iobitridol)",
@@ -3052,7 +3520,9 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "xenetix-inj-350-100ml-iobitridol"
+  "slug": "xenetix-inj-350-100ml-iobitridol",
+  "image": "assets/img/products/xenetix-inj-350-100ml-iobitridol.svg",
+  "image_placeholder": true
  },
  {
   "name": "Zoledronic acid AHP 4mg inj (Zoledronic Acid)",
@@ -3065,6 +3535,8 @@
   "in_stock": true,
   "has_price": true,
   "price_anomaly": false,
-  "slug": "zoledronic-acid-ahp-4mg-inj-zoledronic-acid"
+  "slug": "zoledronic-acid-ahp-4mg-inj-zoledronic-acid",
+  "image": "assets/img/products/zoledronic-acid-ahp-4mg-inj-zoledronic-acid.webp",
+  "image_placeholder": false
  }
 ]

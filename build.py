@@ -62,7 +62,9 @@ def prod_card(p, rel=""):
     gen = ('<div class="prod-generic">' + esc(p["generic"]) + '</div>'
            if p.get("generic") and p["generic"].lower() not in p["name"].lower() else '')
     mfr = '<div class="prod-mfr">' + esc(p["manufacturer"]) + '</div>' if p.get("manufacturer") else '<div class="prod-mfr">&nbsp;</div>'
-    return ('<article class="prod">' + stock_badge(p) +
+    img = ('<a href="' + rel + 'product/' + p["slug"] + '.html"><img class="prod-img" src="' + rel + p.get("image", "") + '" alt="' + esc(p["name"]) + '" loading="lazy"></a>'
+           if p.get("image") else '')
+    return ('<article class="prod">' + img + stock_badge(p) +
             '<div class="prod-cat">' + esc(p["category"]) + '</div>' +
             '<h3><a href="' + rel + 'product/' + p["slug"] + '.html">' + esc(p["name"]) + '</a></h3>' +
             gen + mfr + price_html(p) + btn + '</article>')
@@ -79,9 +81,8 @@ def header(active, rel=""):
     for href, label in NAV:
         cls = ' class="active"' if href == active else ""
         items.append('<a href="' + rel + href + '"' + cls + '>' + label + '</a>')
-    return f'''<div class="topbar"><div class="container"><span>Mon to Fri 9 AM to 6 PM, Sat 9 AM to 5 PM</span><span class="tb-right"><a href="tel:{PHONE_TEL}">{PHONE_DISPLAY}</a><a href="https://wa.me/{WA_NUM}" target="_blank" rel="noopener">WhatsApp {WA_DISPLAY}</a></span></div></div>
-<header class="site-header"><div class="container">
-<a class="logo" href="{rel}index.html"><span class="logo-badge"><span class="logo-script">Oncolink</span><span class="logo-sub">PHARMA DISTRIBUTORS</span></span><span class="logo-text"><b>ONCOLINK Pharma Distributors</b><span>Oncology medicines, Lahore since 2006</span></span></a>
+    return f'''<header class="site-header"><div class="container">
+<a class="logo" href="{rel}index.html"><img class="logo-img" src="{rel}assets/img/logo-old.png" alt="ONCOLINK Pharma Distributors" width="130" height="90"><span class="logo-text"><b>ONCOLINK Pharma Distributors</b><span>Oncology medicines, Lahore since 2006</span></span></a>
 <form class="header-search" id="header-search"><input id="header-search-input" type="search" placeholder="Search a medicine..." aria-label="Search medicines"><button type="submit">Search</button></form>
 <button class="nav-toggle" aria-label="Menu">&#9776;</button>
 <nav class="main-nav">{''.join(items)}</nav>
@@ -90,7 +91,7 @@ def header(active, rel=""):
 <div class="trustbar"><div class="container"><div><b>Since 2006</b><span>Serving patients and hospitals</span></div><div><b>4.5 stars</b><span>24 Google reviews</span></div><div><b>WHO GDP</b><span>Good Distribution Practices</span></div><div><b>Cold chain 2 to 8 C</b><span>Temperature controlled delivery</span></div></div></div>'''
 
 FOOTER = '''<footer class="site-footer"><div class="container"><div class="cols">
-<div><span class="logo-badge"><span class="logo-script">Oncolink</span><span class="logo-sub">PHARMA DISTRIBUTORS</span></span>
+<div><img class="logo-img foot-logo" src="{rel}assets/img/logo-old.png" alt="ONCOLINK Pharma Distributors" width="130" height="90">
 <p style="margin-top:12px">Oncolink Pharma Distributors is a trusted pharmaceutical company committed to supplying high-quality medicines across Pakistan. We specialize in oncology and specialty care, ensuring timely delivery, proper storage, and genuine products.</p>
 <p><a href="https://www.facebook.com/oncolinkpharma/" target="_blank" rel="noopener">Facebook</a> &nbsp;|&nbsp; <a href="https://pk.linkedin.com/in/muhammad-sajid-42415ba2" target="_blank" rel="noopener">LinkedIn</a></p></div>
 <div><h4>Medicines</h4><ul>
@@ -118,14 +119,15 @@ FOOTER = '''<footer class="site-footer"><div class="container"><div class="cols"
 <a class="wa-float" href="https://wa.me/923218406899?text=Hello%20Oncolink%2C%20I%20need%20help%20with%20a%20medicine." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32" fill="#fff"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8.9 3.9 1.5 6 1.5h.3c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 22.5c-1.9 0-3.8-.5-5.4-1.5l-.4-.2-4.6 1.2 1.2-4.5-.3-.4C6 18.4 5.5 16.7 5.5 15 5.5 9.2 10.2 4.5 16 4.5S26.5 9.2 26.5 15 21.8 25.5 16 25.5zm6.3-7.6c-.3-.2-2-1-2.3-1.1-.3-.1-.6-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.2-.8.1-.3-.2-1.5-.6-2.9-1.8-1.1-.9-1.8-2.1-2-2.4-.2-.3 0-.5.2-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6-.1-.2-.8-2-1.1-2.7-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.4 3.7 5.8 5.2.8.3 1.4.5 1.9.7.8.3 1.5.2 2.1.1.6-.1 2-.8 2.3-1.6.3-.8.3-1.4.2-1.6-.1-.1-.3-.2-.7-.4z"/></svg></a>'''
 
 def rel_footer(rel):
+    out = FOOTER.replace("{rel}", rel)
     if not rel:
-        return FOOTER
+        return out
     def repl(m):
         url = m.group(1)
         if url.startswith(("http", "tel:", "mailto:", "#")):
             return 'href="' + url + '"'
         return 'href="' + rel + url + '"'
-    return re.sub(r'href="([^"]*)"', repl, FOOTER)
+    return re.sub(r'href="([^"]*)"', repl, out)
 
 def page(title, desc, active, body, rel="", extra_head=""):
     return f'''<!DOCTYPE html>
@@ -138,7 +140,7 @@ def page(title, desc, active, body, rel="", extra_head=""):
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:type" content="website">
-<link rel="icon" href="{rel}assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="{rel}assets/img/logo-old.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -282,6 +284,7 @@ def build_products():
             schema = ('<script type="application/ld+json">{"@context":"https://schema.org","@type":"Product",'
                       '"name":' + json.dumps(p["name"]) + ',"description":' + json.dumps((p["generic"] + " " if p.get("generic") else "") + "Available at Oncolink Pharma Distributors, Lahore.") +
                       ',"brand":{"@type":"Brand","name":' + json.dumps(p["manufacturer"] or "Oncolink") + '},'
+                      '"image":"https://oncolinkpharma.com/' + p.get("image", "") + '",'
                       '"offers":{"@type":"Offer","priceCurrency":"PKR","price":' + str(int(round(p["price_min"]))) +
                       ',"availability":"https://schema.org/InStock"}}</script>')
         price_block = price_html(p)
@@ -299,10 +302,13 @@ def build_products():
         cold_note = ('<div class="callout"><b>Cold chain:</b> If this medicine needs cold storage, we pack and ship it in insulated packaging with cold packs, and keep it at 2 to 8 C. Ask us on WhatsApp and we will confirm how your medicine is stored and shipped.</div>'
                      if p["category"] in ("Anti Cancer", "Haematology") else "")
         rel_cards = "".join(prod_card(x, "../") for x in related(p))
+        pd_img = ('<div class="pd-img"><img src="../' + p.get("image", "") + '" alt="' + esc(p["name"]) + '" loading="lazy"></div>'
+                  if p.get("image") else "")
         body = f'''<div class="page-head"><div class="container"><div class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="../shop.html">Medicines</a> &rsaquo; {esc(p["name"])}</div>
 <h1>{esc(p["name"])}</h1></div></div>
 <section class="section"><div class="container"><div class="pd-wrap">
 <div class="pd-main">
+{pd_img}
 {stock_badge(p)} <span class="pill">{esc(p["category"])}</span>
 <table class="pd-meta">{meta_rows}</table>
 <p>Prices can change. WhatsApp us to confirm today's price before you order. If this medicine is out of stock, message us and we will check when it will be available again.</p>

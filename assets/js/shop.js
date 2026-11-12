@@ -32,7 +32,8 @@
     var btn = p.in_stock
       ? '<a class="btn btn-wa btn-block" href="' + waLink(p) + '" target="_blank" rel="noopener">Order on WhatsApp</a>'
       : '<a class="btn btn-outline btn-block" href="' + waLink(p) + '" target="_blank" rel="noopener">Check availability</a>';
-    return '<article class="prod">' + badges +
+    var img = p.image ? '<a href="product/' + p.slug + '.html"><img class="prod-img" src="' + p.image + '" alt="' + esc(p.name) + '" loading="lazy"></a>' : '';
+    return '<article class="prod">' + img + badges +
       '<h3><a href="product/' + p.slug + '.html">' + esc(p.name) + '</a></h3>' +
       (p.generic ? '<div class="prod-generic">' + esc(p.generic) + '</div>' : '') +
       (p.manufacturer ? '<div class="prod-mfr">' + esc(p.manufacturer) + '</div>' : '<div class="prod-mfr">&nbsp;</div>') +
