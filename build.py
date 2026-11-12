@@ -191,11 +191,26 @@ def build_home():
         '<div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>&ldquo;' + esc(t) + '&rdquo;</p><div class="who">' + esc(n) + ' &middot; Google review</div></div>'
         for n, t in REVIEWS)
     body = f'''<section class="hero"><div class="container">
+<div class="hero-grid">
+<div class="hero-copy">
 <div class="eyebrow">Oncology medicine distributor, Lahore since 2006</div>
 <h1>Genuine cancer medicines, delivered with care.</h1>
 <p>We supply oncology and specialty medicines to hospitals, pharmacies, doctors and patients across Pakistan. Every product is genuine, stored correctly and delivered on time.</p>
 <form class="hero-search" id="hero-search"><input id="hero-search-input" type="search" placeholder="Search a medicine by brand or generic name..." aria-label="Search medicines"><button type="submit">Search</button></form>
 <div class="hero-quick"><a href="shop.html?cat=Anti%20Cancer">Anti Cancer</a><a href="shop.html?q=bevacizumab">Bevacizumab</a><a href="shop.html?q=rituximab">Rituximab</a><a href="shop.html?q=imatinib">Imatinib</a><a href="shop.html?q=trastuzumab">Trastuzumab</a></div>
+</div>
+<div class="hero-visual">
+<div class="hero-visual-card">
+<span class="hero-badge">100% Genuine</span>
+<img class="hero-main-img" src="assets/img/products/avastin-inj-bevacizumab.webp" alt="Avastin 400 mg/16 ml injection box by Roche" loading="eager">
+<div class="hero-visual-row">
+<img src="assets/img/products/herceptin-trastuzumab.webp" alt="Herceptin 600 mg/5 ml injection box by Roche" loading="lazy">
+<img src="assets/img/products/nexavar-200-mg-tab-25c-60-s-sorafenib.webp" alt="Nexavar 200 mg film-coated tablets box by Bayer" loading="lazy">
+</div>
+<p class="hero-visual-cap">Genuine packs from Roche, Bayer and other leading makers.</p>
+</div>
+</div>
+</div>
 <div class="hero-cards">
 <div class="hero-card"><b>1. Find your medicine</b><p>Search by brand or generic name. See the price and stock status right away.</p></div>
 <div class="hero-card"><b>2. WhatsApp or call us</b><p>Confirm availability and price in one message. No account needed.</p></div>
